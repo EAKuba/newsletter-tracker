@@ -1,23 +1,19 @@
 {
-  "updatedAt": "2026-01-04T21:50:19.416Z",
+  "updatedAt": "2026-01-04T21:55:42.781Z",
   "players": [
     {
       "handle": "EA_Kuba",
       "class": "Rogue",
-      "points": 20,
+      "points": 10,
       "badges": [
-        "badge_s1_m01",
-        "badge_s1_m02"
+        "badge_s1_m01"
       ],
       "progress": {
         "Season 1": {
           "01": true
-        },
-        "Season 2": {
-          "02": true
         }
       },
-      "lastUpdate": "2026-01-04T21:49:39.584Z"
+      "lastUpdate": "2026-01-04T17:14:55.249Z"
     }
   ]
 }

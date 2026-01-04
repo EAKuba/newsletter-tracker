@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Newsletter Progress Tracker</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; max-width: 1100px; }
+    h1 { margin: 0 0 10px; }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+    input { padding: 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 280px; }
+    button { padding: 10px 14px; border: 1px solid #ccc; border-radius: 10px; background: #fff; cursor: pointer; }
+    button:hover { background: #f6f6f6; }
+    .meta { color: #555; margin: 8px 0 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+    .card { border: 1px solid #ddd; border-radius: 14px; padding: 14px; background: #fff; }
+    .handle { font-weight: 700; font-size: 18px; }
+    .muted { color: #666; }
+    .kvs { display: flex; gap: 14px; margin: 10px 0; flex-wrap: wrap; }
+    .kv { font-size: 14px; }
+    .badges { margin-top: 10px; }
+    .badge { display: inline-block; padding: 4px 8px; border: 1px solid #ccc; border-radius: 999px; margin: 4px 6px 0 0; font-size: 12px; }
+    .small { font-size: 12px; }
+    .error { border-color: #e0a2a2; background: #fff6f6; }
+    .footer { margin-top: 18px; color: #777; font-size: 12px; }
+    pre { background: #f7f7f7; padding: 10px; border-radius: 10px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Security Newsletter Progress</h1>
+
+  <div class="row">
+    <input id="search" placeholder="Search handle (partial ok)..." />
+    <button id="refresh">Refresh</button>
+    <label class="small muted">
+      <input id="showProgress" type="checkbox" />
+      Show progress JSON
+    </label>
+  </div>
+
+  <div class="meta">
+    Updated: <strong id="updatedAt">loading…</strong>
+    <span class="muted small"> (public data only — no keys)</span>
+  </div>
+
+  <div id="status" class="meta small muted"></div>
+  <div id="players" class="grid"></div>
+
+  <div class="footer">
+    This page loads <code>./progress.json</code> from the same GitHub Pages site. No Google endpoints are used.
+  </div>
+
+<script>
+  let DATA = null;
+
+  async function loadData() {
+    const statusEl = document.getElementById('status');
+    statusEl.textContent = 'Loading progress.json…';
+
+    // cache-bust to reduce confusion
+    const url = './progress.json?ts=' + Date.now();
+    const res = await fetch(url, { cache: 'no-store' });
+
+    if (!res.ok) throw new Error('Failed to load progress.json (HTTP ' + res.status + ')');
+
+    const json = await res.json();
+    if (!json || typeof json !== 'object') throw new Error('progress.json is not valid JSON object');
+
+    if (!Array.isArray(json.players)) json.players = [];
+    DATA = json;
+
+    document.getElementById('updatedAt').textContent = DATA.updatedAt || '(missing)';
+    statusEl.textContent = 'Loaded ' + DATA.players.length + ' players.';
+    render();
+  }
+
+  function render() {
+    const q = (document.getElementById('search').value || '').trim().toLowerCase();
+    const showProgress = document.getElementById('showProgress').checked;
+    const container = document.getElementById('players');
+    container.innerHTML = '';
+
+    if (!DATA) return;
+
+    const players = DATA.players || [];
+    const filtered = players.filter(p => {
+      const h = String(p.handle || '').toLowerCase();
+      return !q || h.includes(q);
+    });
+
+    if (!filtered.length) {
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = '<div class="muted">No players found.</div>';
+      container.appendChild(div);
+      return;
+    }
+
+    filtered.slice(0, 200).forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const badges = Array.isArray(p.badges) ? p.badges : [];
+      const points = Number(p.points || 0);
+      const clazz = String(p.class || '');
+      const lastUpdate = String(p.lastUpdate || '');
+      const progress = p.progress || {};
+
+      card.innerHTML = `
+        <div class="handle">${escapeHtml(String(p.handle || ''))}</div>
+        <div class="muted small">Last update: ${escapeHtml(lastUpdate)}</div>
+        <div class="kvs">
+          <div class="kv">Class: <strong>${escapeHtml(clazz)}</strong></div>
+          <div class="kv">Points: <strong>${points}</strong></div>
+          <div class="kv">Badges: <strong>${badges.length}</strong></div>
+        </div>
+        <div class="badges">
+          ${badges.length ? badges.map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('') : '<span class="muted small">No badges yet</span>'}
+        </div>
+        ${showProgress ? `<div style="margin-top:10px"><div class="small muted">Progress</div><pre class="small">${escapeHtml(JSON.stringify(progress, null, 2))}</pre></div>` : ''}
+      `;
+
+      container.appendChild(card);
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[c]));
+  }
+
+  document.getElementById('search').addEventListener('input', render);
+  document.getElementById('showProgress').addEventListener('change', render);
+  document.getElementById('refresh').addEventListener('click', () => {
+    loadData().catch(showError);
+  });
+
+  function showError(err) {
+    const statusEl = document.getElementById('status');
+    statusEl.textContent = (err && err.message) ? err.message : String(err);
+    statusEl.classList.add('error');
+    document.getElementById('players').innerHTML =
+      `<div class="card error"><strong>Error</strong><div class="muted small">${escapeHtml(statusEl.textContent)}</div></div>`;
+  }
+
+  loadData().catch(showError);
+</script>
+</body>
+</html>

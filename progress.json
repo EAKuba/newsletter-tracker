@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-01-06T15:37:50.756Z",
+  "updatedAt": "2026-01-06T15:41:35.919Z",
   "players": [
     {
       "handle": "EA_Kuba",
       "seasons": {
         "Season 1": {
           "class": "Sentinel",
-          "points": 1,
+          "points": 5,
           "badges": [
             "badge_s1_m01"
           ]
         }
       },
-      "totalPoints": 1,
+      "totalPoints": 5,
       "lastUpdate": "2026-01-06T15:35:07.875Z"
     },
     {
@@ -20,13 +20,13 @@
       "seasons": {
         "Season 1": {
           "class": "Sentinel",
-          "points": 1,
+          "points": 3,
           "badges": [
             "badge_s1_m01"
           ]
         }
       },
-      "totalPoints": 1,
+      "totalPoints": 3,
       "lastUpdate": "2026-01-06T15:37:43.582Z"
     }
   ],

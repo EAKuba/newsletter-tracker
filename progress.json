@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-01-06T12:35:32.275Z",
+  "updatedAt": "2026-01-06T13:38:24.745Z",
   "players": [
     {
       "handle": "EA_Kuba",
-      "class": "Scout",
-      "points": 10,
+      "class": "Sentinel",
+      "points": 1,
       "badges": [
-        "badge_s1_m01"
+        "badge_s1_m04"
       ],
       "progress": {
-        "Season 1": {
-          "01": true
+        "Season 2": {
+          "04": true
         }
       },
-      "lastUpdate": "2026-01-06T12:07:19.550Z"
+      "lastUpdate": "2026-01-06T13:38:02.980Z"
     }
   ]
 }

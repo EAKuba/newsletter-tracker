@@ -30,7 +30,7 @@
   <h1>Security Newsletter Progress</h1>
 
   <div class="row">
-    <input id="search" placeholder="Search handle (partial ok)..." />
+    <input id="search" placeholder="Search Forum ID (partial ok)..." />
     <button id="refresh">Refresh</button>
     <label class="small muted">
       <input id="showProgress" type="checkbox" />
@@ -54,97 +54,90 @@
   let DATA = null;
 
   async function loadData() {
-    const statusEl = document.getElementById('status');
-    statusEl.textContent = 'Loading progress.json…';
-
-    // cache-bust to reduce confusion
-    const url = './progress.json?ts=' + Date.now();
-    const res = await fetch(url, { cache: 'no-store' });
-
-    if (!res.ok) throw new Error('Failed to load progress.json (HTTP ' + res.status + ')');
-
-    const json = await res.json();
-    if (!json || typeof json !== 'object') throw new Error('progress.json is not valid JSON object');
-
-    if (!Array.isArray(json.players)) json.players = [];
-    DATA = json;
-
+    const res = await fetch('./progress.json?ts=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed to load progress.json: ' + res.status);
+    DATA = await res.json();
     document.getElementById('updatedAt').textContent = DATA.updatedAt || '(missing)';
-    statusEl.textContent = 'Loaded ' + DATA.players.length + ' players.';
     render();
   }
 
   function render() {
     const q = (document.getElementById('search').value || '').trim().toLowerCase();
-    const showProgress = document.getElementById('showProgress').checked;
-    const container = document.getElementById('players');
-    container.innerHTML = '';
+    const el = document.getElementById('players');
+    el.innerHTML = '';
 
-    if (!DATA) return;
+    const seasonsOrder = Array.isArray(DATA.seasonsOrder) ? DATA.seasonsOrder : ['Season 1','Season 2','Season 3','Season 4'];
+    const players = Array.isArray(DATA.players) ? DATA.players : [];
 
-    const players = DATA.players || [];
     const filtered = players.filter(p => {
-      const h = String(p.handle || '').toLowerCase();
+      const h = (p.handle || '').toLowerCase();
       return !q || h.includes(q);
     });
 
-    if (!filtered.length) {
-      const div = document.createElement('div');
-      div.className = 'card';
-      div.innerHTML = '<div class="muted">No players found.</div>';
-      container.appendChild(div);
-      return;
-    }
+    const table = document.createElement('table');
+    table.style.width = '100%';
+    table.style.borderCollapse = 'collapse';
 
-    filtered.slice(0, 200).forEach(p => {
-      const card = document.createElement('div');
-      card.className = 'card';
+    // header
+    const thead = document.createElement('thead');
+    const hr = document.createElement('tr');
+    hr.innerHTML = `
+      <th style="text-align:left;border-bottom:1px solid #ddd;padding:10px;">Forum ID</th>
+      <th style="text-align:right;border-bottom:1px solid #ddd;padding:10px;">Total</th>
+      ${seasonsOrder.map(s => `<th style="text-align:left;border-bottom:1px solid #ddd;padding:10px;">${escapeHtml(s)}</th>`).join('')}
+      <th style="text-align:left;border-bottom:1px solid #ddd;padding:10px;">Last update</th>
+    `;
+    thead.appendChild(hr);
+    table.appendChild(thead);
 
-      const badges = Array.isArray(p.badges) ? p.badges : [];
-      const points = Number(p.points || 0);
-      const clazz = String(p.class || '');
-      const lastUpdate = String(p.lastUpdate || '');
-      const progress = p.progress || {};
+    const tbody = document.createElement('tbody');
 
-      card.innerHTML = `
-        <div class="handle">${escapeHtml(String(p.handle || ''))}</div>
-        <div class="muted small">Last update: ${escapeHtml(lastUpdate)}</div>
-        <div class="kvs">
-          <div class="kv">Class: <strong>${escapeHtml(clazz)}</strong></div>
-          <div class="kv">Points: <strong>${points}</strong></div>
-          <div class="kv">Badges: <strong>${badges.length}</strong></div>
-        </div>
-        <div class="badges">
-          ${badges.length ? badges.map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('') : '<span class="muted small">No badges yet</span>'}
-        </div>
-        ${showProgress ? `<div style="margin-top:10px"><div class="small muted">Progress</div><pre class="small">${escapeHtml(JSON.stringify(progress, null, 2))}</pre></div>` : ''}
+    filtered.forEach(p => {
+      const tr = document.createElement('tr');
+      tr.style.borderBottom = '1px solid #f0f0f0';
+
+      const total = Number(p.totalPoints || 0);
+      const seasons = p.seasons || {};
+
+      const seasonCells = seasonsOrder.map(seasonName => {
+        const s = seasons[seasonName];
+        if (!s) return `<div class="muted">—</div>`;
+
+        const cls = s.class || '';
+        const pts = Number(s.points || 0);
+        const badges = Array.isArray(s.badges) ? s.badges : [];
+        const badgesHtml = badges.map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('');
+
+        return `
+          <div><strong>${escapeHtml(cls)}</strong> · ${pts} pts</div>
+          <div style="margin-top:6px">${badgesHtml || '<span class="muted">No badges</span>'}</div>
+        `;
+      }).join('</td><td style="vertical-align:top;padding:10px;">');
+
+      tr.innerHTML = `
+        <td style="padding:10px;vertical-align:top;"><strong>${escapeHtml(p.handle || '')}</strong></td>
+        <td style="padding:10px;vertical-align:top;text-align:right;"><strong>${total}</strong></td>
+        <td style="padding:10px;vertical-align:top;">${seasonCells}</td>
+        <td style="padding:10px;vertical-align:top;" class="muted small">${escapeHtml(p.lastUpdate || '')}</td>
       `;
 
-      container.appendChild(card);
+      tbody.appendChild(tr);
     });
+
+    table.appendChild(tbody);
+    el.appendChild(table);
   }
 
   function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, c => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-    }[c]));
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
 
   document.getElementById('search').addEventListener('input', render);
-  document.getElementById('showProgress').addEventListener('change', render);
-  document.getElementById('refresh').addEventListener('click', () => {
-    loadData().catch(showError);
+  document.getElementById('refresh').addEventListener('click', loadData);
+
+  loadData().catch(err => {
+    document.getElementById('players').innerHTML = `<div class="card"><strong>Error</strong><div class="muted">${escapeHtml(err.message)}</div></div>`;
   });
-
-  function showError(err) {
-    const statusEl = document.getElementById('status');
-    statusEl.textContent = (err && err.message) ? err.message : String(err);
-    statusEl.classList.add('error');
-    document.getElementById('players').innerHTML =
-      `<div class="card error"><strong>Error</strong><div class="muted small">${escapeHtml(statusEl.textContent)}</div></div>`;
-  }
-
-  loadData().catch(showError);
 </script>
 </body>
 </html>

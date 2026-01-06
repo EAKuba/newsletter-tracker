@@ -1,4 +1,19 @@
 {
-  "updatedAt": "2026-01-06T12:06:22.277Z",
-  "players": []
+  "updatedAt": "2026-01-06T12:08:05.554Z",
+  "players": [
+    {
+      "handle": "EA_Kuba",
+      "class": "Scout",
+      "points": 10,
+      "badges": [
+        "badge_s1_m01"
+      ],
+      "progress": {
+        "Season 1": {
+          "01": true
+        }
+      },
+      "lastUpdate": "2026-01-06T12:07:19.550Z"
+    }
+  ]
 }

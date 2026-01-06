@@ -3,218 +3,385 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Newsletter Progress Tracker</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; max-width: 1100px; }
-    h1 { margin: 0 0 10px; }
-    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
-    input { padding: 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 280px; }
-    button { padding: 10px 14px; border: 1px solid #ccc; border-radius: 10px; background: #fff; cursor: pointer; }
-    button:hover { background: #f6f6f6; }
-    .meta { color: #555; margin: 8px 0 18px; }
-    .muted { color: #666; }
-    .small { font-size: 12px; }
-    .badge { display: inline-block; padding: 4px 8px; border: 1px solid #ccc; border-radius: 999px; margin: 4px 6px 0 0; font-size: 12px; }
-    .footer { margin-top: 18px; color: #777; font-size: 12px; }
-    .card { border: 1px solid #ddd; border-radius: 14px; padding: 14px; background: #fff; }
+  <title>Security Newsletter Leaderboard</title>
 
-    /* New */
-    .pill { display:inline-block; padding: 3px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; margin-left: 8px; color:#444; background:#fafafa;}
-    .warnbox { margin-top: 8px; padding: 10px; border: 1px solid #e0a2a2; background: #fff6f6; border-radius: 12px; }
-    .okbox { margin-top: 8px; padding: 10px; border: 1px solid #cfe7cf; background: #f4fff4; border-radius: 12px; }
-    table { width: 100%; border-collapse: collapse; }
-    th, td { vertical-align: top; padding: 10px; }
-    th { text-align: left; border-bottom: 1px solid #ddd; }
-    tr { border-bottom: 1px solid #f0f0f0; }
+  <!-- Norwester-like headline font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1: #0b2cff;
+      --bg2: #8b00ff;
+
+      --card: rgba(10, 12, 30, 0.55);
+      --card2: rgba(10, 12, 30, 0.35);
+
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+
+      --line: rgba(255,255,255,0.12);
+
+      --neon: #21d4ff;     /* cyan */
+      --neon2: #7c4dff;    /* violet */
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(900px 500px at 20% 15%, rgba(33,212,255,0.25), transparent 60%),
+                  radial-gradient(700px 500px at 70% 80%, rgba(124,77,255,0.25), transparent 60%),
+                  linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 26px 22px 40px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 10px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      flex: 0 0 auto;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .titleblock { min-width: 0; }
+
+    .title {
+      font-family: "Bebas Neue", Inter, system-ui, sans-serif; /* Norwester-ish */
+      letter-spacing: 0.5px;
+      font-size: 44px;
+      line-height: 1.0;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .season {
+      font-family: "Bebas Neue", Inter, system-ui, sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.6px;
+      color: rgba(255,255,255,0.92);
+      padding: 10px 14px;
+      border-radius: 16px;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+      flex: 0 0 auto;
+    }
+
+    /* Table container */
+    .panel {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.22);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .panelhead {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, rgba(33,212,255,0.12), rgba(124,77,255,0.10));
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    .panelhead .hint {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 12px;
+      color: rgba(255,255,255,0.78);
+      letter-spacing: 0.3px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0,0,0,0.18);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: rgba(255,255,255,0.04);
+    }
+
+    .id {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .total {
+      text-align: right;
+      font-weight: 800;
+      font-size: 18px;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .seasonCell .topline {
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .seasonCell .pts {
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+    }
+
+    .badges {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.88);
+      white-space: nowrap;
+    }
+
+    .badge::before{
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--neon);
+      box-shadow: 0 0 12px rgba(33,212,255,0.55);
+      display: inline-block;
+    }
+
+    .empty {
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+    }
+
+    .errorCard {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    @media (max-width: 860px) {
+      .title { font-size: 36px; }
+      .season { font-size: 22px; padding: 8px 12px; }
+      .logo { width: 56px; height: 56px; }
+      thead th:nth-child(n+3) { min-width: 220px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Security Newsletter Progress</h1>
+  <div class="wrap">
+    <div class="header">
+      <div class="brand">
+        <!-- Put your logo here: repo/assets/logo.png -->
+        <div class="logo">
+          <img src="./assets/logo.png" alt="EA Forums Security Newsletter" />
+        </div>
 
-  <div class="row">
-    <input id="search" placeholder="Search Forum ID (partial ok)..." />
-    <button id="refresh">Refresh</button>
-    <label class="small muted">
-      <input id="showProgress" type="checkbox" />
-      Show progress JSON
-    </label>
-  </div>
+        <div class="titleblock">
+          <h1 class="title">Security Newsletter Leaderboard</h1>
+          <div class="subtitle">Last Update: <span id="lastUpdate">loading…</span></div>
+        </div>
+      </div>
 
-  <div class="meta">
-    Updated: <strong id="updatedAt">loading…</strong>
-    <span class="muted small"> (public data only — no keys)</span>
-    <span id="currentSeasonPill" class="pill" style="display:none;"></span>
-  </div>
+      <div class="season" id="seasonLabel" style="display:none;">Season 1</div>
+    </div>
 
-  <div id="status" class="meta small muted"></div>
+    <div class="panel">
+      <div class="panelhead">
+        <div class="hint" id="hint">Leaderboard</div>
+        <div class="hint" id="hint2"></div>
+      </div>
 
-  <div id="players"></div>
-
-  <div id="jsonWrap" style="display:none; margin-top: 14px;">
-    <div class="card">
-      <div class="small muted" style="margin-bottom:8px;">Debug: progress.json</div>
-      <pre id="jsonPre"></pre>
+      <div id="tableWrap"></div>
     </div>
   </div>
 
-  <div class="footer">
-    This page loads <code>./progress.json</code> from the same GitHub Pages site. No Google endpoints are used.
-  </div>
+  <script>
+    let DATA = null;
 
-<script>
-  let DATA = null;
+    async function loadData() {
+      const res = await fetch('./progress.json?ts=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('Failed to load progress.json: ' + res.status);
+      DATA = await res.json();
 
-  async function loadData() {
-    const res = await fetch('./progress.json?ts=' + Date.now(), { cache: 'no-store' });
-    if (!res.ok) throw new Error('Failed to load progress.json: ' + res.status);
-    DATA = await res.json();
+      // Last Update format: YYYY-MM-DD HH:MM (UTC)
+      const iso = String(DATA.updatedAt || '');
+      const formatted = iso && iso.length >= 16 ? (iso.slice(0,16).replace('T',' ')) : '(missing)';
+      document.getElementById('lastUpdate').textContent = formatted;
 
-    document.getElementById('updatedAt').textContent = DATA.updatedAt || '(missing)';
-
-    const cs = String(DATA.currentSeason || '').trim();
-    const pill = document.getElementById('currentSeasonPill');
-    if (cs) {
-      pill.textContent = 'Current: ' + cs;
-      pill.style.display = 'inline-block';
-    } else {
-      pill.style.display = 'none';
-    }
-
-    render();
-  }
-
-  function render() {
-    const q = (document.getElementById('search').value || '').trim().toLowerCase();
-    const el = document.getElementById('players');
-    el.innerHTML = '';
-
-    const seasonsOrder = Array.isArray(DATA.seasonsOrder) ? DATA.seasonsOrder : ['Season 1','Season 2','Season 3','Season 4'];
-    const players = Array.isArray(DATA.players) ? DATA.players : [];
-    const currentSeason = String(DATA.currentSeason || '').trim();
-
-    const filtered = players.filter(p => {
-      const h = (p.handle || '').toLowerCase();
-      return !q || h.includes(q);
-    });
-
-    document.getElementById('status').textContent =
-      `Loaded ${filtered.length} player(s).`;
-
-    const table = document.createElement('table');
-
-    // header
-    const thead = document.createElement('thead');
-    const hr = document.createElement('tr');
-    hr.innerHTML = `
-      <th style="width:220px;">Forum ID</th>
-      <th style="width:80px; text-align:right;">Total</th>
-      ${seasonsOrder.map(s => `<th>${escapeHtml(s)}</th>`).join('')}
-      <th style="width:180px;">Last update</th>
-    `;
-    thead.appendChild(hr);
-    table.appendChild(thead);
-
-    const tbody = document.createElement('tbody');
-
-    filtered.forEach(p => {
-      const tr = document.createElement('tr');
-
-      const total = Number(p.totalPoints || 0);
-      const seasons = p.seasons || {};
-      const elig = p.eligibility || {};
-      const needs = !!elig.needsReregistration;
-
-      // eligibility message (only if current season known)
-      let eligHtml = '';
-      if (currentSeason) {
-        if (needs) {
-          const reason = (elig.invalidRegistrations && elig.invalidRegistrations[currentSeason]) ? elig.invalidRegistrations[currentSeason] : '';
-          const available = Array.isArray(elig.availableClasses) ? elig.availableClasses : [];
-          const availHtml = available.length
-            ? available.map(c => `<span class="badge">${escapeHtml(c)}</span>`).join('')
-            : `<span class="muted small">No classes available</span>`;
-
-          eligHtml = `
-            <div class="warnbox">
-              <div><strong>Action needed:</strong> Re-register for <strong>${escapeHtml(currentSeason)}</strong>.</div>
-              ${reason ? `<div class="small muted" style="margin-top:4px;">Reason: ${escapeHtml(reason)}</div>` : ''}
-              <div class="small muted" style="margin-top:8px;">Available classes:</div>
-              <div style="margin-top:4px;">${availHtml}</div>
-            </div>
-          `;
-        } else {
-          // If they are good for current season, show remaining classes anyway (nice UX)
-          const available = Array.isArray(elig.availableClasses) ? elig.availableClasses : [];
-          const used = Array.isArray(elig.usedClasses) ? elig.usedClasses : [];
-          const availableHtml = available.length
-            ? available.map(c => `<span class="badge">${escapeHtml(c)}</span>`).join('')
-            : `<span class="muted small">None</span>`;
-          const usedHtml = used.length
-            ? used.map(c => `<span class="badge">${escapeHtml(c)}</span>`).join('')
-            : `<span class="muted small">None</span>`;
-
-          eligHtml = `
-            <div class="okbox">
-              <div><strong>Season status:</strong> OK for <strong>${escapeHtml(currentSeason)}</strong>.</div>
-              <div class="small muted" style="margin-top:8px;">Used classes:</div>
-              <div style="margin-top:4px;">${usedHtml}</div>
-              <div class="small muted" style="margin-top:8px;">Available classes:</div>
-              <div style="margin-top:4px;">${availableHtml}</div>
-            </div>
-          `;
-        }
+      // Season label: "Season 1" (no button)
+      const cs = String(DATA.currentSeason || '').trim();
+      const seasonEl = document.getElementById('seasonLabel');
+      if (cs) {
+        seasonEl.textContent = cs;
+        seasonEl.style.display = 'inline-block';
+      } else {
+        seasonEl.style.display = 'none';
       }
 
-      const seasonCells = seasonsOrder.map(seasonName => {
-        const s = seasons[seasonName];
-        if (!s) return `<div class="muted">—</div>`;
-
-        const cls = s.class || '';
-        const pts = Number(s.points || 0);
-        const badges = Array.isArray(s.badges) ? s.badges : [];
-        const badgesHtml = badges.map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('');
-
-        return `
-          <div><strong>${escapeHtml(cls)}</strong> · ${pts} pts</div>
-          <div style="margin-top:6px">${badgesHtml || '<span class="muted">No badges</span>'}</div>
-        `;
-      }).join('</td><td>');
-
-      tr.innerHTML = `
-        <td>
-          <div><strong>${escapeHtml(p.handle || '')}</strong></div>
-          ${eligHtml}
-        </td>
-        <td style="text-align:right;"><strong>${total}</strong></td>
-        <td>${seasonCells}</td>
-        <td class="muted small">${escapeHtml(p.lastUpdate || '')}</td>
-      `;
-
-      tbody.appendChild(tr);
-    });
-
-    table.appendChild(tbody);
-    el.appendChild(table);
-
-    // optional debug JSON
-    const show = document.getElementById('showProgress').checked;
-    document.getElementById('jsonWrap').style.display = show ? 'block' : 'none';
-    if (show) {
-      document.getElementById('jsonPre').textContent = JSON.stringify(DATA, null, 2);
+      renderTable();
     }
-  }
 
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  }
+    function renderTable() {
+      const wrap = document.getElementById('tableWrap');
+      wrap.innerHTML = '';
 
-  document.getElementById('search').addEventListener('input', render);
-  document.getElementById('refresh').addEventListener('click', loadData);
-  document.getElementById('showProgress').addEventListener('change', render);
+      const seasonsOrder = Array.isArray(DATA.seasonsOrder) ? DATA.seasonsOrder : ['Season 1','Season 2','Season 3','Season 4'];
+      const players = Array.isArray(DATA.players) ? DATA.players : [];
 
-  loadData().catch(err => {
-    document.getElementById('players').innerHTML = `<div class="card"><strong>Error</strong><div class="muted">${escapeHtml(err.message)}</div></div>`;
-  });
-</script>
+      const table = document.createElement('table');
+
+      const thead = document.createElement('thead');
+      const trh = document.createElement('tr');
+      trh.innerHTML = `
+        <th style="width:240px;">Forum ID</th>
+        <th style="width:90px; text-align:right;">Total</th>
+        ${seasonsOrder.map(s => `<th>${escapeHtml(s)}</th>`).join('')}
+        <th style="width:200px;">Last update</th>
+      `;
+      thead.appendChild(trh);
+      table.appendChild(thead);
+
+      const tbody = document.createElement('tbody');
+
+      players.forEach(p => {
+        const tr = document.createElement('tr');
+
+        const total = Number(p.totalPoints || 0);
+        const seasons = p.seasons || {};
+
+        const seasonCells = seasonsOrder.map(seasonName => {
+          const s = seasons[seasonName];
+          if (!s) return `<div class="empty">—</div>`;
+
+          const cls = s.class || '';
+          const pts = Number(s.points || 0);
+          const badges = Array.isArray(s.badges) ? s.badges : [];
+          const badgesHtml = badges.length
+            ? `<div class="badges">${badges.map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('')}</div>`
+            : `<div class="empty" style="margin-top:8px;">No badges</div>`;
+
+          return `
+            <div class="seasonCell">
+              <div class="topline">
+                <span>${escapeHtml(cls)}</span>
+                <span class="pts">${pts} pts</span>
+              </div>
+              ${badgesHtml}
+            </div>
+          `;
+        }).join('</td><td>');
+
+        tr.innerHTML = `
+          <td>
+            <div class="id">${escapeHtml(p.handle || '')}</div>
+          </td>
+          <td class="total">${total}</td>
+          <td>${seasonCells}</td>
+          <td class="muted">${escapeHtml(p.lastUpdate || '')}</td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      wrap.appendChild(table);
+
+      // small header hints (optional)
+      document.getElementById('hint').textContent = `Players: ${players.length}`;
+      document.getElementById('hint2').textContent = '';
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    loadData().catch(err => {
+      const wrap = document.getElementById('tableWrap');
+      wrap.innerHTML = `<div class="errorCard"><strong>Error</strong><div class="muted" style="margin-top:6px;">${escapeHtml(err.message)}</div></div>`;
+      document.getElementById('lastUpdate').textContent = '(error)';
+    });
+  </script>
 </body>
 </html>

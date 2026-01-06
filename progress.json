@@ -1,56 +1,6 @@
 {
-  "updatedAt": "2026-01-06T18:35:33.170Z",
-  "players": [
-    {
-      "handle": "EA_Kuba",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 5,
-          "badges": [
-            "badge_s1_m01"
-          ]
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 5,
-          "badges": [
-            "badge_s1_m04"
-          ]
-        },
-        "Season 3": {
-          "class": "Scout",
-          "points": 1,
-          "badges": [
-            "badge_s1_m07"
-          ]
-        },
-        "Season 4": {
-          "class": "Archivist",
-          "points": 5,
-          "badges": [
-            "badge_s1_m12"
-          ]
-        }
-      },
-      "totalPoints": 16,
-      "lastUpdate": "2026-01-06T15:40:34.021Z"
-    },
-    {
-      "handle": "EA_Test",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 3,
-          "badges": [
-            "badge_s1_m01"
-          ]
-        }
-      },
-      "totalPoints": 3,
-      "lastUpdate": "2026-01-06T15:37:43.582Z"
-    }
-  ],
+  "updatedAt": "2026-01-06T19:30:12.478Z",
+  "players": [],
   "seasonsOrder": [
     "Season 1",
     "Season 2",

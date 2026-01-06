@@ -1,19 +1,39 @@
 {
-  "updatedAt": "2026-01-06T13:47:27.240Z",
+  "updatedAt": "2026-01-06T15:37:50.756Z",
   "players": [
     {
       "handle": "EA_Kuba",
-      "class": "Sentinel",
-      "points": 5,
-      "badges": [
-        "badge_s1_m04"
-      ],
-      "progress": {
-        "Season 2": {
-          "04": true
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": [
+            "badge_s1_m01"
+          ]
         }
       },
-      "lastUpdate": "2026-01-06T13:38:02.980Z"
+      "totalPoints": 1,
+      "lastUpdate": "2026-01-06T15:35:07.875Z"
+    },
+    {
+      "handle": "EA_Test",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": [
+            "badge_s1_m01"
+          ]
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-01-06T15:37:43.582Z"
     }
+  ],
+  "seasonsOrder": [
+    "Season 1",
+    "Season 2",
+    "Season 3",
+    "Season 4"
   ]
 }

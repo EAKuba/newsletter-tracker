@@ -12,18 +12,20 @@
     button { padding: 10px 14px; border: 1px solid #ccc; border-radius: 10px; background: #fff; cursor: pointer; }
     button:hover { background: #f6f6f6; }
     .meta { color: #555; margin: 8px 0 18px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
-    .card { border: 1px solid #ddd; border-radius: 14px; padding: 14px; background: #fff; }
-    .handle { font-weight: 700; font-size: 18px; }
     .muted { color: #666; }
-    .kvs { display: flex; gap: 14px; margin: 10px 0; flex-wrap: wrap; }
-    .kv { font-size: 14px; }
-    .badges { margin-top: 10px; }
-    .badge { display: inline-block; padding: 4px 8px; border: 1px solid #ccc; border-radius: 999px; margin: 4px 6px 0 0; font-size: 12px; }
     .small { font-size: 12px; }
-    .error { border-color: #e0a2a2; background: #fff6f6; }
+    .badge { display: inline-block; padding: 4px 8px; border: 1px solid #ccc; border-radius: 999px; margin: 4px 6px 0 0; font-size: 12px; }
     .footer { margin-top: 18px; color: #777; font-size: 12px; }
-    pre { background: #f7f7f7; padding: 10px; border-radius: 10px; overflow: auto; }
+    .card { border: 1px solid #ddd; border-radius: 14px; padding: 14px; background: #fff; }
+
+    /* New */
+    .pill { display:inline-block; padding: 3px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; margin-left: 8px; color:#444; background:#fafafa;}
+    .warnbox { margin-top: 8px; padding: 10px; border: 1px solid #e0a2a2; background: #fff6f6; border-radius: 12px; }
+    .okbox { margin-top: 8px; padding: 10px; border: 1px solid #cfe7cf; background: #f4fff4; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { vertical-align: top; padding: 10px; }
+    th { text-align: left; border-bottom: 1px solid #ddd; }
+    tr { border-bottom: 1px solid #f0f0f0; }
   </style>
 </head>
 <body>
@@ -41,10 +43,19 @@
   <div class="meta">
     Updated: <strong id="updatedAt">loading…</strong>
     <span class="muted small"> (public data only — no keys)</span>
+    <span id="currentSeasonPill" class="pill" style="display:none;"></span>
   </div>
 
   <div id="status" class="meta small muted"></div>
-  <div id="players" class="grid"></div>
+
+  <div id="players"></div>
+
+  <div id="jsonWrap" style="display:none; margin-top: 14px;">
+    <div class="card">
+      <div class="small muted" style="margin-bottom:8px;">Debug: progress.json</div>
+      <pre id="jsonPre"></pre>
+    </div>
+  </div>
 
   <div class="footer">
     This page loads <code>./progress.json</code> from the same GitHub Pages site. No Google endpoints are used.
@@ -57,7 +68,18 @@
     const res = await fetch('./progress.json?ts=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('Failed to load progress.json: ' + res.status);
     DATA = await res.json();
+
     document.getElementById('updatedAt').textContent = DATA.updatedAt || '(missing)';
+
+    const cs = String(DATA.currentSeason || '').trim();
+    const pill = document.getElementById('currentSeasonPill');
+    if (cs) {
+      pill.textContent = 'Current: ' + cs;
+      pill.style.display = 'inline-block';
+    } else {
+      pill.style.display = 'none';
+    }
+
     render();
   }
 
@@ -68,24 +90,26 @@
 
     const seasonsOrder = Array.isArray(DATA.seasonsOrder) ? DATA.seasonsOrder : ['Season 1','Season 2','Season 3','Season 4'];
     const players = Array.isArray(DATA.players) ? DATA.players : [];
+    const currentSeason = String(DATA.currentSeason || '').trim();
 
     const filtered = players.filter(p => {
       const h = (p.handle || '').toLowerCase();
       return !q || h.includes(q);
     });
 
+    document.getElementById('status').textContent =
+      `Loaded ${filtered.length} player(s).`;
+
     const table = document.createElement('table');
-    table.style.width = '100%';
-    table.style.borderCollapse = 'collapse';
 
     // header
     const thead = document.createElement('thead');
     const hr = document.createElement('tr');
     hr.innerHTML = `
-      <th style="text-align:left;border-bottom:1px solid #ddd;padding:10px;">Forum ID</th>
-      <th style="text-align:right;border-bottom:1px solid #ddd;padding:10px;">Total</th>
-      ${seasonsOrder.map(s => `<th style="text-align:left;border-bottom:1px solid #ddd;padding:10px;">${escapeHtml(s)}</th>`).join('')}
-      <th style="text-align:left;border-bottom:1px solid #ddd;padding:10px;">Last update</th>
+      <th style="width:220px;">Forum ID</th>
+      <th style="width:80px; text-align:right;">Total</th>
+      ${seasonsOrder.map(s => `<th>${escapeHtml(s)}</th>`).join('')}
+      <th style="width:180px;">Last update</th>
     `;
     thead.appendChild(hr);
     table.appendChild(thead);
@@ -94,10 +118,52 @@
 
     filtered.forEach(p => {
       const tr = document.createElement('tr');
-      tr.style.borderBottom = '1px solid #f0f0f0';
 
       const total = Number(p.totalPoints || 0);
       const seasons = p.seasons || {};
+      const elig = p.eligibility || {};
+      const needs = !!elig.needsReregistration;
+
+      // eligibility message (only if current season known)
+      let eligHtml = '';
+      if (currentSeason) {
+        if (needs) {
+          const reason = (elig.invalidRegistrations && elig.invalidRegistrations[currentSeason]) ? elig.invalidRegistrations[currentSeason] : '';
+          const available = Array.isArray(elig.availableClasses) ? elig.availableClasses : [];
+          const availHtml = available.length
+            ? available.map(c => `<span class="badge">${escapeHtml(c)}</span>`).join('')
+            : `<span class="muted small">No classes available</span>`;
+
+          eligHtml = `
+            <div class="warnbox">
+              <div><strong>Action needed:</strong> Re-register for <strong>${escapeHtml(currentSeason)}</strong>.</div>
+              ${reason ? `<div class="small muted" style="margin-top:4px;">Reason: ${escapeHtml(reason)}</div>` : ''}
+              <div class="small muted" style="margin-top:8px;">Available classes:</div>
+              <div style="margin-top:4px;">${availHtml}</div>
+            </div>
+          `;
+        } else {
+          // If they are good for current season, show remaining classes anyway (nice UX)
+          const available = Array.isArray(elig.availableClasses) ? elig.availableClasses : [];
+          const used = Array.isArray(elig.usedClasses) ? elig.usedClasses : [];
+          const availableHtml = available.length
+            ? available.map(c => `<span class="badge">${escapeHtml(c)}</span>`).join('')
+            : `<span class="muted small">None</span>`;
+          const usedHtml = used.length
+            ? used.map(c => `<span class="badge">${escapeHtml(c)}</span>`).join('')
+            : `<span class="muted small">None</span>`;
+
+          eligHtml = `
+            <div class="okbox">
+              <div><strong>Season status:</strong> OK for <strong>${escapeHtml(currentSeason)}</strong>.</div>
+              <div class="small muted" style="margin-top:8px;">Used classes:</div>
+              <div style="margin-top:4px;">${usedHtml}</div>
+              <div class="small muted" style="margin-top:8px;">Available classes:</div>
+              <div style="margin-top:4px;">${availableHtml}</div>
+            </div>
+          `;
+        }
+      }
 
       const seasonCells = seasonsOrder.map(seasonName => {
         const s = seasons[seasonName];
@@ -112,13 +178,16 @@
           <div><strong>${escapeHtml(cls)}</strong> · ${pts} pts</div>
           <div style="margin-top:6px">${badgesHtml || '<span class="muted">No badges</span>'}</div>
         `;
-      }).join('</td><td style="vertical-align:top;padding:10px;">');
+      }).join('</td><td>');
 
       tr.innerHTML = `
-        <td style="padding:10px;vertical-align:top;"><strong>${escapeHtml(p.handle || '')}</strong></td>
-        <td style="padding:10px;vertical-align:top;text-align:right;"><strong>${total}</strong></td>
-        <td style="padding:10px;vertical-align:top;">${seasonCells}</td>
-        <td style="padding:10px;vertical-align:top;" class="muted small">${escapeHtml(p.lastUpdate || '')}</td>
+        <td>
+          <div><strong>${escapeHtml(p.handle || '')}</strong></div>
+          ${eligHtml}
+        </td>
+        <td style="text-align:right;"><strong>${total}</strong></td>
+        <td>${seasonCells}</td>
+        <td class="muted small">${escapeHtml(p.lastUpdate || '')}</td>
       `;
 
       tbody.appendChild(tr);
@@ -126,6 +195,13 @@
 
     table.appendChild(tbody);
     el.appendChild(table);
+
+    // optional debug JSON
+    const show = document.getElementById('showProgress').checked;
+    document.getElementById('jsonWrap').style.display = show ? 'block' : 'none';
+    if (show) {
+      document.getElementById('jsonPre').textContent = JSON.stringify(DATA, null, 2);
+    }
   }
 
   function escapeHtml(s) {
@@ -134,6 +210,7 @@
 
   document.getElementById('search').addEventListener('input', render);
   document.getElementById('refresh').addEventListener('click', loadData);
+  document.getElementById('showProgress').addEventListener('change', render);
 
   loadData().catch(err => {
     document.getElementById('players').innerHTML = `<div class="card"><strong>Error</strong><div class="muted">${escapeHtml(err.message)}</div></div>`;

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-06T21:56:10.884Z",
+  "updatedAt": "2026-01-06T21:56:32.749Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -26,27 +26,27 @@
         },
         "Season 2": {
           "class": "Cipher",
-          "points": 1,
+          "points": 5,
           "badges": [
             "badge_s1_m04"
           ]
         },
         "Season 3": {
           "class": "Scout",
-          "points": 1,
+          "points": 5,
           "badges": [
             "badge_s1_m07"
           ]
         },
         "Season 4": {
           "class": "Archivist",
-          "points": 1,
+          "points": 5,
           "badges": [
             "badge_s1_m10"
           ]
         }
       },
-      "totalPoints": 8,
+      "totalPoints": 20,
       "lastUpdate": "2026-01-06T21:55:18.223Z",
       "eligibility": {
         "usedClasses": [

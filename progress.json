@@ -1,5 +1,18 @@
 {
-  "updatedAt": "2026-01-06T19:30:57.413Z",
+  "updatedAt": "2026-01-06T21:06:20.628Z",
+  "currentSeason": "Season 1",
+  "classes": [
+    "Sentinel",
+    "Cipher",
+    "Scout",
+    "Archivist"
+  ],
+  "seasonsOrder": [
+    "Season 1",
+    "Season 2",
+    "Season 3",
+    "Season 4"
+  ],
   "players": [
     {
       "handle": "EA_Kuba",
@@ -13,13 +26,19 @@
         }
       },
       "totalPoints": 1,
-      "lastUpdate": "2026-01-06T19:30:47.975Z"
+      "lastUpdate": "2026-01-06T19:30:47.975Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
     }
-  ],
-  "seasonsOrder": [
-    "Season 1",
-    "Season 2",
-    "Season 3",
-    "Season 4"
   ]
 }

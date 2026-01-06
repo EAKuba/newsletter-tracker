@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-06T21:06:20.628Z",
+  "updatedAt": "2026-01-06T21:08:30.429Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -16,17 +16,9 @@
   "players": [
     {
       "handle": "EA_Kuba",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 1,
-          "badges": [
-            "badge_s1_m01"
-          ]
-        }
-      },
-      "totalPoints": 1,
-      "lastUpdate": "2026-01-06T19:30:47.975Z",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
       "eligibility": {
         "usedClasses": [
           "Sentinel"

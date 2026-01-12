@@ -16,15 +16,12 @@
       --bg2: #8b00ff;
 
       --card: rgba(10, 12, 30, 0.55);
-      --card2: rgba(10, 12, 30, 0.35);
-
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.70);
-
       --line: rgba(255,255,255,0.12);
 
-      --neon: #21d4ff;     /* cyan */
-      --neon2: #7c4dff;    /* violet */
+      --neon: #21d4ff;
+      --neon2: #7c4dff;
     }
 
     * { box-sizing: border-box; }
@@ -84,7 +81,7 @@
     .titleblock { min-width: 0; }
 
     .title {
-      font-family: "Bebas Neue", Inter, system-ui, sans-serif; /* Norwester-ish */
+      font-family: "Bebas Neue", Inter, system-ui, sans-serif;
       letter-spacing: 0.5px;
       font-size: 44px;
       line-height: 1.0;
@@ -113,7 +110,7 @@
       flex: 0 0 auto;
     }
 
-    /* Table container */
+    /* Panel */
     .panel {
       background: var(--card);
       border: 1px solid rgba(255,255,255,0.14);
@@ -130,8 +127,8 @@
       background: linear-gradient(90deg, rgba(33,212,255,0.12), rgba(124,77,255,0.10));
       display: flex;
       align-items: center;
-      gap: 12px;
       justify-content: space-between;
+      gap: 12px;
     }
 
     .panelhead .hint {
@@ -139,7 +136,6 @@
       color: var(--muted);
     }
 
-    /* Table */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -167,26 +163,20 @@
     }
 
     .id {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 14px;
-      margin-bottom: 6px;
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 12px;
     }
 
     .total {
       text-align: right;
-      font-weight: 800;
+      font-weight: 900;
       font-size: 18px;
       color: rgba(255,255,255,0.95);
     }
 
     .seasonCell .topline {
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       display: flex;
       align-items: baseline;
       gap: 8px;
@@ -196,42 +186,57 @@
     .seasonCell .pts {
       font-size: 12px;
       color: rgba(255,255,255,0.75);
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    .badges {
-      margin-top: 8px;
+    /* Badge images */
+    .badgeRow {
+      margin-top: 10px;
       display: flex;
+      gap: 10px;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 6px;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 9px;
-      border-radius: 999px;
-      font-size: 12px;
+    .badgeImgWrap {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.88);
-      white-space: nowrap;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
     }
 
-    .badge::before{
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--neon);
-      box-shadow: 0 0 12px rgba(33,212,255,0.55);
-      display: inline-block;
+    .badgeImg {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .locked {
+      filter: grayscale(1) brightness(0.65) contrast(0.95);
+      opacity: 0.55;
     }
 
     .empty {
       color: rgba(255,255,255,0.55);
       font-size: 12px;
+    }
+
+    .finalCell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .finalLabel {
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+      font-weight: 700;
+      white-space: nowrap;
     }
 
     .errorCard {
@@ -241,11 +246,11 @@
       border: 1px solid rgba(255,255,255,0.14);
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 920px) {
       .title { font-size: 36px; }
       .season { font-size: 22px; padding: 8px 12px; }
       .logo { width: 56px; height: 56px; }
-      thead th:nth-child(n+3) { min-width: 220px; }
+      thead th:nth-child(n+3) { min-width: 240px; }
     }
   </style>
 </head>
@@ -253,8 +258,8 @@
   <div class="wrap">
     <div class="header">
       <div class="brand">
-        <!-- Put your logo here: repo/assets/logo.png -->
         <div class="logo">
+          <!-- Put your logo here -->
           <img src="./assets/logo.png" alt="EA Forums Security Newsletter" />
         </div>
 
@@ -280,17 +285,66 @@
   <script>
     let DATA = null;
 
+    // Badge folder path in repo
+    const BADGE_DIR = './assets/badges/';
+
+    // Final badge filename (space is OK)
+    const FINAL_BADGE_FILE = 'final badge.png';
+
+    // Map class -> filenames
+    const CLASS_BADGE_FILES = {
+      'Scout': {
+        1: 'Scout_Level_1.png',
+        2: 'Scout_Level_2.png',
+        3: 'Scout_Level_3.png',
+      },
+      'Sentinel': {
+        1: 'Sentinel_Level_1.png',
+        2: 'Sentinel_Level_2.png',
+        3: 'Sentinel_Level_3.png',
+      },
+      'Archivist': {
+        1: 'Archivist_Level_1.png',
+        2: 'Archivist_Level_2.png',
+        3: 'Archivist_Level_3.png',
+      },
+      'Cipher': {
+        1: 'Cipher_Level_1.png',
+        2: 'Cipher_Level_2.png',
+        3: 'Cipher_Level_3.png',
+      }
+    };
+
+    function badgeUrl(fileName) {
+      // Encode spaces etc. safely
+      return BADGE_DIR + encodeURIComponent(fileName);
+    }
+
+    function classBadgeUrl(clazz, level) {
+      const m = CLASS_BADGE_FILES[String(clazz || '').trim()];
+      if (!m || !m[level]) return '';
+      return badgeUrl(m[level]);
+    }
+
+    function levelUnlocked(points, level) {
+      return Number(points || 0) >= level;
+    }
+
+    function finalUnlocked(totalPoints) {
+      return Number(totalPoints || 0) >= 11;
+    }
+
     async function loadData() {
       const res = await fetch('./progress.json?ts=' + Date.now(), { cache: 'no-store' });
       if (!res.ok) throw new Error('Failed to load progress.json: ' + res.status);
       DATA = await res.json();
 
-      // Last Update format: YYYY-MM-DD HH:MM (UTC)
+      // "Last Update: YYYY-MM-DD HH:MM" from ISO (UTC slice)
       const iso = String(DATA.updatedAt || '');
       const formatted = iso && iso.length >= 16 ? (iso.slice(0,16).replace('T',' ')) : '(missing)';
       document.getElementById('lastUpdate').textContent = formatted;
 
-      // Season label: "Season 1" (no button)
+      // Season label
       const cs = String(DATA.currentSeason || '').trim();
       const seasonEl = document.getElementById('seasonLabel');
       if (cs) {
@@ -303,6 +357,15 @@
       renderTable();
     }
 
+    function renderBadgeImg(url, unlocked, altText) {
+      if (!url) return `<div class="empty">—</div>`;
+      return `
+        <div class="badgeImgWrap" title="${escapeHtml(altText)}">
+          <img class="badgeImg ${unlocked ? '' : 'locked'}" src="${url}" alt="${escapeHtml(altText)}" />
+        </div>
+      `;
+    }
+
     function renderTable() {
       const wrap = document.getElementById('tableWrap');
       wrap.innerHTML = '';
@@ -312,14 +375,15 @@
 
       const table = document.createElement('table');
 
+      // Header: Forum ID | Total | Season 1..4 | Final
       const thead = document.createElement('thead');
       const trh = document.createElement('tr');
       trh.innerHTML = `
         <th style="width:240px;">Forum ID</th>
         <th style="width:90px; text-align:right;">Total</th>
         ${seasonsOrder.map(s => `<th>${escapeHtml(s)}</th>`).join('')}
+        <th style="width:160px;">Final</th>
       `;
-
       thead.appendChild(trh);
       table.appendChild(thead);
 
@@ -335,17 +399,27 @@
           const s = seasons[seasonName];
           if (!s) return `<div class="empty">—</div>`;
 
-          const cls = s.class || '';
+          const cls = String(s.class || '').trim();
           const pts = Number(s.points || 0);
-          const badges = Array.isArray(s.badges) ? s.badges : [];
-          const badgesHtml = badges.length
-            ? `<div class="badges">${badges.map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('')}</div>`
-            : `<div class="empty" style="margin-top:8px;">No badges</div>`;
+
+          // show 3 level badges for that season/class
+          const b1 = classBadgeUrl(cls, 1);
+          const b2 = classBadgeUrl(cls, 2);
+          const b3 = classBadgeUrl(cls, 3);
+
+          // If a badge file is missing, we'll show "—" in that slot.
+          const badgesHtml = `
+            <div class="badgeRow">
+              ${renderBadgeImg(b1, levelUnlocked(pts, 1), cls + ' Level 1')}
+              ${renderBadgeImg(b2, levelUnlocked(pts, 2), cls + ' Level 2')}
+              ${renderBadgeImg(b3, levelUnlocked(pts, 3), cls + ' Level 3')}
+            </div>
+          `;
 
           return `
             <div class="seasonCell">
               <div class="topline">
-                <span>${escapeHtml(cls)}</span>
+                <span>${escapeHtml(cls || 'Unknown')}</span>
                 <span class="pts">${pts} pts</span>
               </div>
               ${badgesHtml}
@@ -353,14 +427,24 @@
           `;
         }).join('</td><td>');
 
-        tr.innerHTML = `
-          <td>
-            <div class="id">${escapeHtml(p.handle || '')}</div>
-          </td>
-          <td class="total">${total}</td>
-          <td>${seasonCells}</td>
+        // Final badge (total points across all seasons)
+        const finalUrl = badgeUrl(FINAL_BADGE_FILE);
+        const finalIsUnlocked = finalUnlocked(total);
+        const finalHtml = `
+          <div class="finalCell">
+            <div class="badgeImgWrap" title="Final badge">
+              <img class="badgeImg ${finalIsUnlocked ? '' : 'locked'}" src="${finalUrl}" alt="Final badge" />
+            </div>
+            <div class="finalLabel">${finalIsUnlocked ? 'Unlocked' : 'Locked'}</div>
+          </div>
         `;
 
+        tr.innerHTML = `
+          <td><div class="id">${escapeHtml(p.handle || '')}</div></td>
+          <td class="total">${total}</td>
+          <td>${seasonCells}</td>
+          <td>${finalHtml}</td>
+        `;
 
         tbody.appendChild(tr);
       });
@@ -368,7 +452,6 @@
       table.appendChild(tbody);
       wrap.appendChild(table);
 
-      // small header hints (optional)
       document.getElementById('hint').textContent = `Players: ${players.length}`;
       document.getElementById('hint2').textContent = '';
     }

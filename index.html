@@ -112,7 +112,7 @@
       background: var(--card);
       border: 1px solid rgba(255,255,255,0.14);
       border-radius: 18px;
-      overflow: hidden;
+      overflow: visible; /* allow hover previews to escape panel edges */
       box-shadow: 0 18px 60px rgba(0,0,0,0.22);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -126,6 +126,8 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
     }
 
     .panelhead .hint {
@@ -153,6 +155,7 @@
       padding: 14px;
       border-bottom: 1px solid rgba(255,255,255,0.08);
       vertical-align: top;
+      overflow: visible; /* allow previews */
     }
 
     tbody tr:hover {
@@ -192,7 +195,7 @@
       display: flex;
       gap: 10px;
       align-items: center;
-      flex-wrap: nowrap;       /* key: do not wrap */
+      flex-wrap: nowrap;
       overflow: visible;
     }
 
@@ -207,6 +210,7 @@
       place-items: center;
       box-shadow: 0 12px 30px rgba(0,0,0,0.18);
       flex: 0 0 auto;
+      overflow: visible;
     }
 
     .badgeImg {
@@ -217,18 +221,17 @@
       transform: translateZ(0);
     }
 
-    /* Locked = greyed out */
     .locked {
       filter: grayscale(1) brightness(0.60) contrast(0.95);
       opacity: 0.55;
     }
 
-    /* Hover zoom preview */
+    /* Hover preview to the RIGHT */
     .badgePreview {
       position: absolute;
-      left: 50%;
-      bottom: calc(100% + 10px);
-      transform: translateX(-50%);
+      left: calc(100% + 12px);
+      top: 50%;
+      transform: translateY(-50%);
       width: 140px;
       height: 140px;
       border-radius: 18px;
@@ -238,8 +241,8 @@
       display: none;
       place-items: center;
       padding: 10px;
-      z-index: 50;
-      pointer-events: none; /* avoid hover flicker */
+      z-index: 999;
+      pointer-events: none;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
@@ -338,11 +341,7 @@
       return badgeUrl(m[level]);
     }
 
-    // Only the highest unlocked level should be colored.
-    // pts 0 => all grey
-    // pts 1 => only L1 colored
-    // pts 2 => only L2 colored
-    // pts 3+ => only L3 colored
+    // Only the highest unlocked level is colored.
     function highestUnlockedLevel(points) {
       const p = Number(points || 0);
       if (p >= 3) return 3;
@@ -360,12 +359,10 @@
       if (!res.ok) throw new Error('Failed to load progress.json: ' + res.status);
       DATA = await res.json();
 
-      // "Last Update: YYYY-MM-DD HH:MM" from ISO (UTC slice)
       const iso = String(DATA.updatedAt || '');
       const formatted = iso && iso.length >= 16 ? (iso.slice(0,16).replace('T',' ')) : '(missing)';
       document.getElementById('lastUpdate').textContent = formatted;
 
-      // Season label
       const cs = String(DATA.currentSeason || '').trim();
       const seasonEl = document.getElementById('seasonLabel');
       if (cs) {
@@ -379,16 +376,17 @@
     }
 
     function renderBadgeImg(url, isColored, altText) {
-      if (!url) return `<div class="badgeImgWrap"><div class="empty">—</div></div>`;
+      if (!url) {
+        return `<div class="badgeImgWrap"><div class="empty">—</div></div>`;
+      }
 
-      // If not colored, lock it (grey)
-      const cls = isColored ? '' : 'locked';
+      const lockedClass = isColored ? '' : 'locked';
 
       return `
         <div class="badgeImgWrap" title="${escapeHtml(altText)}">
-          <img class="badgeImg ${cls}" src="${url}" alt="${escapeHtml(altText)}" />
+          <img class="badgeImg ${lockedClass}" src="${url}" alt="${escapeHtml(altText)}" />
           <div class="badgePreview">
-            <img src="${url}" alt="${escapeHtml(altText)}" class="${cls}" />
+            <img src="${url}" alt="${escapeHtml(altText)}" class="${lockedClass}" />
           </div>
         </div>
       `;

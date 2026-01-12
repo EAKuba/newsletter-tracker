@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-12T13:09:06.074Z",
+  "updatedAt": "2026-01-12T18:35:32.794Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -20,30 +20,22 @@
         "Season 1": {
           "class": "Sentinel",
           "points": 3,
-          "badges": [
-            "badge_s1_m01"
-          ]
+          "badges": []
         },
         "Season 2": {
           "class": "Cipher",
           "points": 3,
-          "badges": [
-            "badge_s1_m04"
-          ]
+          "badges": []
         },
         "Season 3": {
           "class": "Scout",
           "points": 3,
-          "badges": [
-            "badge_s1_m07"
-          ]
+          "badges": []
         },
         "Season 4": {
           "class": "Archivist",
           "points": 3,
-          "badges": [
-            "badge_s1_m10"
-          ]
+          "badges": []
         }
       },
       "totalPoints": 12,
@@ -66,30 +58,22 @@
         "Season 1": {
           "class": "Archivist",
           "points": 2,
-          "badges": [
-            "badge_s1_m03"
-          ]
+          "badges": []
         },
         "Season 2": {
           "class": "Scout",
           "points": 2,
-          "badges": [
-            "badge_s1_m05"
-          ]
+          "badges": []
         },
         "Season 3": {
           "class": "Cipher",
           "points": 3,
-          "badges": [
-            "badge_s1_m09"
-          ]
+          "badges": []
         },
         "Season 4": {
           "class": "Sentinel",
           "points": 1,
-          "badges": [
-            "badge_s1_m11"
-          ]
+          "badges": []
         }
       },
       "totalPoints": 8,
@@ -112,16 +96,12 @@
         "Season 1": {
           "class": "Cipher",
           "points": 2,
-          "badges": [
-            "badge_s1_m01"
-          ]
+          "badges": []
         },
         "Season 3": {
           "class": "Sentinel",
           "points": 2,
-          "badges": [
-            "badge_s1_m09"
-          ]
+          "badges": []
         }
       },
       "totalPoints": 4,

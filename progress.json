@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-12T13:06:31.142Z",
+  "updatedAt": "2026-01-12T13:07:40.828Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -62,9 +62,38 @@
     },
     {
       "handle": "EA_Test1",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
+      "seasons": {
+        "Season 1": {
+          "class": "Archivist",
+          "points": 1,
+          "badges": [
+            "badge_s1_m03"
+          ]
+        },
+        "Season 2": {
+          "class": "Scout",
+          "points": 1,
+          "badges": [
+            "badge_s1_m05"
+          ]
+        },
+        "Season 3": {
+          "class": "Cipher",
+          "points": 1,
+          "badges": [
+            "badge_s1_m09"
+          ]
+        },
+        "Season 4": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": [
+            "badge_s1_m11"
+          ]
+        }
+      },
+      "totalPoints": 4,
+      "lastUpdate": "2026-01-12T12:58:59.740Z",
       "eligibility": {
         "usedClasses": [
           "Archivist",
@@ -79,9 +108,24 @@
     },
     {
       "handle": "EA_Test2",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
+      "seasons": {
+        "Season 1": {
+          "class": "Cipher",
+          "points": 1,
+          "badges": [
+            "badge_s1_m01"
+          ]
+        },
+        "Season 3": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": [
+            "badge_s1_m09"
+          ]
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-01-12T13:01:29.266Z",
       "eligibility": {
         "usedClasses": [
           "Cipher",

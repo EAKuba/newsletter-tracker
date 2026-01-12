@@ -19,9 +19,6 @@
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.70);
       --line: rgba(255,255,255,0.12);
-
-      --neon: #21d4ff;
-      --neon2: #7c4dff;
     }
 
     * { box-sizing: border-box; }
@@ -163,7 +160,7 @@
     }
 
     .id {
-      font-weight: 800;
+      font-weight: 900;
       font-size: 14px;
     }
 
@@ -176,10 +173,10 @@
 
     .seasonCell .topline {
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
       display: flex;
       align-items: baseline;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
@@ -189,36 +186,73 @@
       font-weight: 700;
     }
 
-    /* Badge images */
+    /* Badges row: force horizontal, no wrap */
     .badgeRow {
       margin-top: 10px;
       display: flex;
       gap: 10px;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;       /* key: do not wrap */
+      overflow: visible;
     }
 
     .badgeImgWrap {
-      width: 42px;
-      height: 42px;
+      position: relative;
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
       display: grid;
       place-items: center;
       box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+      flex: 0 0 auto;
     }
 
     .badgeImg {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      display: block;
+      transform: translateZ(0);
+    }
+
+    /* Locked = greyed out */
+    .locked {
+      filter: grayscale(1) brightness(0.60) contrast(0.95);
+      opacity: 0.55;
+    }
+
+    /* Hover zoom preview */
+    .badgePreview {
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 10px);
+      transform: translateX(-50%);
+      width: 140px;
+      height: 140px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(10, 12, 30, 0.85);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.38);
+      display: none;
+      place-items: center;
+      padding: 10px;
+      z-index: 50;
+      pointer-events: none; /* avoid hover flicker */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .badgePreview img{
+      width: 120px;
+      height: 120px;
       object-fit: contain;
       display: block;
     }
 
-    .locked {
-      filter: grayscale(1) brightness(0.65) contrast(0.95);
-      opacity: 0.55;
+    .badgeImgWrap:hover .badgePreview {
+      display: grid;
     }
 
     .empty {
@@ -250,7 +284,7 @@
       .title { font-size: 36px; }
       .season { font-size: 22px; padding: 8px 12px; }
       .logo { width: 56px; height: 56px; }
-      thead th:nth-child(n+3) { min-width: 240px; }
+      thead th:nth-child(n+3) { min-width: 260px; }
     }
   </style>
 </head>
@@ -259,7 +293,6 @@
     <div class="header">
       <div class="brand">
         <div class="logo">
-          <!-- Put your logo here -->
           <img src="./assets/logo.png" alt="EA Forums Security Newsletter" />
         </div>
 
@@ -285,38 +318,17 @@
   <script>
     let DATA = null;
 
-    // Badge folder path in repo
     const BADGE_DIR = './assets/badges/';
-
-    // Final badge filename (space is OK)
     const FINAL_BADGE_FILE = 'final badge.png';
 
-    // Map class -> filenames
     const CLASS_BADGE_FILES = {
-      'Scout': {
-        1: 'Scout_Level_1.png',
-        2: 'Scout_Level_2.png',
-        3: 'Scout_Level_3.png',
-      },
-      'Sentinel': {
-        1: 'Sentinel_Level_1.png',
-        2: 'Sentinel_Level_2.png',
-        3: 'Sentinel_Level_3.png',
-      },
-      'Archivist': {
-        1: 'Archivist_Level_1.png',
-        2: 'Archivist_Level_2.png',
-        3: 'Archivist_Level_3.png',
-      },
-      'Cipher': {
-        1: 'Cipher_Level_1.png',
-        2: 'Cipher_Level_2.png',
-        3: 'Cipher_Level_3.png',
-      }
+      'Scout':      { 1:'Scout_Level_1.png',      2:'Scout_Level_2.png',      3:'Scout_Level_3.png' },
+      'Sentinel':   { 1:'Sentinel_Level_1.png',   2:'Sentinel_Level_2.png',   3:'Sentinel_Level_3.png' },
+      'Archivist':  { 1:'Archivist_Level_1.png',  2:'Archivist_Level_2.png',  3:'Archivist_Level_3.png' },
+      'Cipher':     { 1:'Cipher_Level_1.png',     2:'Cipher_Level_2.png',     3:'Cipher_Level_3.png' }
     };
 
     function badgeUrl(fileName) {
-      // Encode spaces etc. safely
       return BADGE_DIR + encodeURIComponent(fileName);
     }
 
@@ -326,8 +338,17 @@
       return badgeUrl(m[level]);
     }
 
-    function levelUnlocked(points, level) {
-      return Number(points || 0) >= level;
+    // Only the highest unlocked level should be colored.
+    // pts 0 => all grey
+    // pts 1 => only L1 colored
+    // pts 2 => only L2 colored
+    // pts 3+ => only L3 colored
+    function highestUnlockedLevel(points) {
+      const p = Number(points || 0);
+      if (p >= 3) return 3;
+      if (p >= 2) return 2;
+      if (p >= 1) return 1;
+      return 0;
     }
 
     function finalUnlocked(totalPoints) {
@@ -357,11 +378,18 @@
       renderTable();
     }
 
-    function renderBadgeImg(url, unlocked, altText) {
-      if (!url) return `<div class="empty">—</div>`;
+    function renderBadgeImg(url, isColored, altText) {
+      if (!url) return `<div class="badgeImgWrap"><div class="empty">—</div></div>`;
+
+      // If not colored, lock it (grey)
+      const cls = isColored ? '' : 'locked';
+
       return `
         <div class="badgeImgWrap" title="${escapeHtml(altText)}">
-          <img class="badgeImg ${unlocked ? '' : 'locked'}" src="${url}" alt="${escapeHtml(altText)}" />
+          <img class="badgeImg ${cls}" src="${url}" alt="${escapeHtml(altText)}" />
+          <div class="badgePreview">
+            <img src="${url}" alt="${escapeHtml(altText)}" class="${cls}" />
+          </div>
         </div>
       `;
     }
@@ -375,7 +403,6 @@
 
       const table = document.createElement('table');
 
-      // Header: Forum ID | Total | Season 1..4 | Final
       const thead = document.createElement('thead');
       const trh = document.createElement('tr');
       trh.innerHTML = `
@@ -402,17 +429,17 @@
           const cls = String(s.class || '').trim();
           const pts = Number(s.points || 0);
 
-          // show 3 level badges for that season/class
+          const top = highestUnlockedLevel(pts);
+
           const b1 = classBadgeUrl(cls, 1);
           const b2 = classBadgeUrl(cls, 2);
           const b3 = classBadgeUrl(cls, 3);
 
-          // If a badge file is missing, we'll show "—" in that slot.
           const badgesHtml = `
             <div class="badgeRow">
-              ${renderBadgeImg(b1, levelUnlocked(pts, 1), cls + ' Level 1')}
-              ${renderBadgeImg(b2, levelUnlocked(pts, 2), cls + ' Level 2')}
-              ${renderBadgeImg(b3, levelUnlocked(pts, 3), cls + ' Level 3')}
+              ${renderBadgeImg(b1, top === 1, cls + ' Level 1')}
+              ${renderBadgeImg(b2, top === 2, cls + ' Level 2')}
+              ${renderBadgeImg(b3, top === 3, cls + ' Level 3')}
             </div>
           `;
 
@@ -427,13 +454,15 @@
           `;
         }).join('</td><td>');
 
-        // Final badge (total points across all seasons)
         const finalUrl = badgeUrl(FINAL_BADGE_FILE);
         const finalIsUnlocked = finalUnlocked(total);
         const finalHtml = `
           <div class="finalCell">
             <div class="badgeImgWrap" title="Final badge">
               <img class="badgeImg ${finalIsUnlocked ? '' : 'locked'}" src="${finalUrl}" alt="Final badge" />
+              <div class="badgePreview">
+                <img src="${finalUrl}" alt="Final badge" class="${finalIsUnlocked ? '' : 'locked'}" />
+              </div>
             </div>
             <div class="finalLabel">${finalIsUnlocked ? 'Unlocked' : 'Locked'}</div>
           </div>

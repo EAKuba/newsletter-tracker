@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-14T18:35:33.253Z",
+  "updatedAt": "2026-01-14T19:37:40.399Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -19,26 +19,26 @@
       "seasons": {
         "Season 1": {
           "class": "Sentinel",
-          "points": 3,
+          "points": 4,
           "badges": []
         },
         "Season 2": {
           "class": "Cipher",
-          "points": 3,
+          "points": 5,
           "badges": []
         },
         "Season 3": {
           "class": "Scout",
-          "points": 3,
+          "points": 4,
           "badges": []
         },
         "Season 4": {
           "class": "Archivist",
-          "points": 3,
+          "points": 4,
           "badges": []
         }
       },
-      "totalPoints": 12,
+      "totalPoints": 17,
       "lastUpdate": "2026-01-06T21:55:18.223Z",
       "eligibility": {
         "usedClasses": [
@@ -57,17 +57,17 @@
       "seasons": {
         "Season 1": {
           "class": "Archivist",
-          "points": 2,
+          "points": 3,
           "badges": []
         },
         "Season 2": {
           "class": "Scout",
-          "points": 2,
+          "points": 3,
           "badges": []
         },
         "Season 3": {
           "class": "Cipher",
-          "points": 3,
+          "points": 4,
           "badges": []
         },
         "Season 4": {
@@ -76,7 +76,7 @@
           "badges": []
         }
       },
-      "totalPoints": 8,
+      "totalPoints": 11,
       "lastUpdate": "2026-01-12T12:58:59.740Z",
       "eligibility": {
         "usedClasses": [
@@ -95,16 +95,16 @@
       "seasons": {
         "Season 1": {
           "class": "Cipher",
-          "points": 2,
+          "points": 3,
           "badges": []
         },
         "Season 3": {
           "class": "Sentinel",
-          "points": 2,
+          "points": 3,
           "badges": []
         }
       },
-      "totalPoints": 4,
+      "totalPoints": 6,
       "lastUpdate": "2026-01-12T13:01:29.266Z",
       "eligibility": {
         "usedClasses": [

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-14T20:10:24.359Z",
+  "updatedAt": "2026-01-14T20:26:20.481Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -114,6 +114,42 @@
           "Archivist"
         ],
         "availableClasses": [],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "EA_Test 6",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "EA_Test 7",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
         "needsReregistration": false,
         "invalidRegistrations": {}
       }

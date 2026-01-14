@@ -341,17 +341,27 @@
       return badgeUrl(m[level]);
     }
 
-    // Only the highest unlocked level is colored.
+    // Only the highest unlocked level is colored (new thresholds).
     function highestUnlockedLevel(points) {
       const p = Number(points || 0);
-      if (p >= 3) return 3;
-      if (p >= 2) return 2;
-      if (p >= 1) return 1;
+      if (p >= 8) return 3;          // Level 3
+      if (p >= 4) return 2;          // Level 2
+      if (p >= 1) return 1;          // Level 1
       return 0;
     }
 
-    function finalUnlocked(totalPoints) {
-      return Number(totalPoints || 0) >= 11;
+    function finalUnlockedForPlayer(player, seasonsOrder) {
+      const seasons = (player && player.seasons) ? player.seasons : {};
+      const order = Array.isArray(seasonsOrder) && seasonsOrder.length
+        ? seasonsOrder
+        : ['Season 1','Season 2','Season 3','Season 4'];
+    
+      for (let i = 0; i < order.length; i++) {
+        const s = seasons[order[i]];
+        const pts = s ? Number(s.points || 0) : 0;
+        if (!(pts >= 8)) return false;
+      }
+      return true;
     }
 
     async function loadData() {
@@ -453,7 +463,7 @@
         }).join('</td><td>');
 
         const finalUrl = badgeUrl(FINAL_BADGE_FILE);
-        const finalIsUnlocked = finalUnlocked(total);
+        const finalIsUnlocked = finalUnlockedForPlayer(p, seasonsOrder);
         const finalHtml = `
           <div class="finalCell">
             <div class="badgeImgWrap" title="Final badge">

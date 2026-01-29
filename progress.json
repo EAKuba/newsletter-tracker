@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-01-29T12:35:34.166Z",
+  "updatedAt": "2026-01-29T15:50:24.802Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -13,5 +13,30 @@
     "Season 3",
     "Season 4"
   ],
-  "players": []
+  "players": [
+    {
+      "handle": "test task code",
+      "seasons": {
+        "Season 1": {
+          "class": "Cipher",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-01-29T15:49:07.971Z",
+      "eligibility": {
+        "usedClasses": [
+          "Cipher"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    }
+  ]
 }

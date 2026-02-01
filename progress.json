@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-01T12:35:35.096Z",
+  "updatedAt": "2026-02-01T18:35:34.482Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -13,5 +13,24 @@
     "Season 3",
     "Season 4"
   ],
-  "players": []
+  "players": [
+    {
+      "handle": "rosemow",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    }
+  ]
 }

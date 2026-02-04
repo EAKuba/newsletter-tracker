@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-03T12:35:32.400Z",
+  "updatedAt": "2026-02-04T10:26:26.860Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -16,9 +16,15 @@
   "players": [
     {
       "handle": "ElliotLH",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 2,
+          "badges": []
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-02-03T15:18:48.603Z",
       "eligibility": {
         "usedClasses": [
           "Scout"
@@ -34,9 +40,15 @@
     },
     {
       "handle": "rosemow",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-02-03T17:11:59.539Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel"
@@ -45,6 +57,24 @@
           "Cipher",
           "Scout",
           "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "EA_Failroader",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

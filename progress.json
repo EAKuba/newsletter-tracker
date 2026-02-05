@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-04T18:35:35.288Z",
+  "updatedAt": "2026-02-05T00:35:34.884Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -116,6 +116,24 @@
         "availableClasses": [
           "Sentinel",
           "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "EZ_Buddie",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
           "Archivist"
         ],
         "needsReregistration": false,

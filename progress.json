@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-05T11:08:58.484Z",
+  "updatedAt": "2026-02-05T11:22:46.234Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -63,6 +63,30 @@
       }
     },
     {
+      "handle": "rosemow",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 2,
+          "badges": []
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-02-04T18:13:30.675Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "EA_Failroader",
       "seasons": {
         "Season 1": {
@@ -81,30 +105,6 @@
           "Sentinel",
           "Cipher",
           "Scout"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "rosemow",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 1,
-      "lastUpdate": "2026-02-03T17:11:59.539Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Scout",
-          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

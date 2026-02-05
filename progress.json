@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-05T12:35:34.389Z",
+  "updatedAt": "2026-02-05T13:30:40.215Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -111,10 +111,16 @@
       }
     },
     {
-      "handle": "Bafanc",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
+      "handle": "EZ_Buddie",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-02-05T13:09:06.730Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel"
@@ -129,7 +135,7 @@
       }
     },
     {
-      "handle": "EZ_Buddie",
+      "handle": "Bafanc",
       "seasons": {},
       "totalPoints": 0,
       "lastUpdate": "",

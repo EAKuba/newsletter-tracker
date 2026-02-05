@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-05T10:46:02.148Z",
+  "updatedAt": "2026-02-05T11:05:18.212Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -39,78 +39,6 @@
       }
     },
     {
-      "handle": "Ellupelluellu",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 2,
-          "badges": []
-        }
-      },
-      "totalPoints": 2,
-      "lastUpdate": "2026-02-04T18:58:28.214Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "EA_Failroader",
-      "seasons": {
-        "Season 1": {
-          "class": "Archivist",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 1,
-      "lastUpdate": "2026-02-04T15:47:41.987Z",
-      "eligibility": {
-        "usedClasses": [
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "rosemow",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 1,
-      "lastUpdate": "2026-02-03T17:11:59.539Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
       "handle": "Bafanc",
       "seasons": {},
       "totalPoints": 0,
@@ -129,7 +57,61 @@
       }
     },
     {
+      "handle": "EA_Failroader",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Ellupelluellu",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "EZ_Buddie",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "rosemow",
       "seasons": {},
       "totalPoints": 0,
       "lastUpdate": "",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-05T09:07:02.440Z",
+  "updatedAt": "2026-02-05T09:08:03.892Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -25,6 +25,30 @@
       },
       "totalPoints": 2,
       "lastUpdate": "2026-02-03T15:18:48.603Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Ellupelluellu",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 2,
+          "badges": []
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-02-04T18:58:28.214Z",
       "eligibility": {
         "usedClasses": [
           "Scout"
@@ -98,24 +122,6 @@
         "availableClasses": [
           "Cipher",
           "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "Ellupelluellu",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

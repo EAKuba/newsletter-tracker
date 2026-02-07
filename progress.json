@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-06T18:35:34.330Z",
+  "updatedAt": "2026-02-07T00:35:34.677Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -145,6 +145,24 @@
         ],
         "availableClasses": [
           "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "NewFoundRemedy",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Cipher"
+        ],
+        "availableClasses": [
+          "Sentinel",
           "Scout",
           "Archivist"
         ],

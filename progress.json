@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-09T00:35:34.296Z",
+  "updatedAt": "2026-02-09T06:35:35.192Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -163,6 +163,24 @@
         ],
         "availableClasses": [
           "Sentinel",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "SharpGoblin",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
           "Scout",
           "Archivist"
         ],

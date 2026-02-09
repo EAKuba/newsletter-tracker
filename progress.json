@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-09T06:35:35.192Z",
+  "updatedAt": "2026-02-09T09:10:50.583Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -19,12 +19,12 @@
       "seasons": {
         "Season 1": {
           "class": "Scout",
-          "points": 2,
+          "points": 3,
           "badges": []
         }
       },
-      "totalPoints": 2,
-      "lastUpdate": "2026-02-03T15:18:48.603Z",
+      "totalPoints": 3,
+      "lastUpdate": "2026-02-06T10:53:04.441Z",
       "eligibility": {
         "usedClasses": [
           "Scout"
@@ -43,12 +43,12 @@
       "seasons": {
         "Season 1": {
           "class": "Scout",
-          "points": 2,
+          "points": 3,
           "badges": []
         }
       },
-      "totalPoints": 2,
-      "lastUpdate": "2026-02-04T18:58:28.214Z",
+      "totalPoints": 3,
+      "lastUpdate": "2026-02-06T19:05:56.591Z",
       "eligibility": {
         "usedClasses": [
           "Scout"
@@ -67,12 +67,12 @@
       "seasons": {
         "Season 1": {
           "class": "Sentinel",
-          "points": 2,
+          "points": 3,
           "badges": []
         }
       },
-      "totalPoints": 2,
-      "lastUpdate": "2026-02-04T18:13:30.675Z",
+      "totalPoints": 3,
+      "lastUpdate": "2026-02-06T17:49:59.780Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel"

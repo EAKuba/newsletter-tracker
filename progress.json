@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-10T06:35:35.725Z",
+  "updatedAt": "2026-02-10T10:38:34.139Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -14,6 +14,30 @@
     "Season 4"
   ],
   "players": [
+    {
+      "handle": "asmodeus566",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 3,
+      "lastUpdate": "2026-02-10T08:50:28.046Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
     {
       "handle": "BAFANC",
       "seasons": {
@@ -176,24 +200,6 @@
         "availableClasses": [
           "Cipher",
           "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "asmodeus566",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

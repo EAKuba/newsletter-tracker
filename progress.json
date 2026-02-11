@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-11T00:35:36.587Z",
+  "updatedAt": "2026-02-11T06:35:36.299Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -208,9 +208,15 @@
     },
     {
       "handle": "SharpGoblin",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-02-11T04:17:49.641Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel"

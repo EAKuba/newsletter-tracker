@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-23T18:35:39.254Z",
+  "updatedAt": "2026-02-24T00:36:00.431Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -217,6 +217,42 @@
       },
       "totalPoints": 1,
       "lastUpdate": "2026-02-05T13:09:06.730Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Chris_Hawkner",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Overskillz25",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
       "eligibility": {
         "usedClasses": [
           "Sentinel"

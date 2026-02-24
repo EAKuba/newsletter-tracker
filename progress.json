@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-24T06:35:36.058Z",
+  "updatedAt": "2026-02-24T16:26:03.055Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -231,6 +231,54 @@
       }
     },
     {
+      "handle": "Midnight9746",
+      "seasons": {
+        "Season 1": {
+          "class": "Cipher",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-02-24T16:18:16.423Z",
+      "eligibility": {
+        "usedClasses": [
+          "Cipher"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Overskillz25",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-02-24T12:16:36.297Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Chris_Hawkner",
       "seasons": {},
       "totalPoints": 0,
@@ -249,18 +297,18 @@
       }
     },
     {
-      "handle": "Overskillz25",
+      "handle": "SumFiiin",
       "seasons": {},
       "totalPoints": 0,
       "lastUpdate": "",
       "eligibility": {
         "usedClasses": [
-          "Sentinel"
+          "Archivist"
         ],
         "availableClasses": [
+          "Sentinel",
           "Cipher",
-          "Scout",
-          "Archivist"
+          "Scout"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

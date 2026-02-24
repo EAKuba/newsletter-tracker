@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-24T16:43:01.756Z",
+  "updatedAt": "2026-02-24T16:44:03.600Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -111,6 +111,30 @@
       }
     },
     {
+      "handle": "Midnight9746",
+      "seasons": {
+        "Season 1": {
+          "class": "Cipher",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 3,
+      "lastUpdate": "2026-02-24T16:38:00.717Z",
+      "eligibility": {
+        "usedClasses": [
+          "Cipher"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "NewFoundRemedy",
       "seasons": {
         "Season 1": {
@@ -175,30 +199,6 @@
         ],
         "availableClasses": [
           "Cipher",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "Midnight9746",
-      "seasons": {
-        "Season 1": {
-          "class": "Cipher",
-          "points": 2,
-          "badges": []
-        }
-      },
-      "totalPoints": 2,
-      "lastUpdate": "2026-02-24T16:38:00.717Z",
-      "eligibility": {
-        "usedClasses": [
-          "Cipher"
-        ],
-        "availableClasses": [
-          "Sentinel",
           "Scout",
           "Archivist"
         ],

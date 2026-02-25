@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-25T12:35:46.984Z",
+  "updatedAt": "2026-02-25T18:35:43.316Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -255,6 +255,30 @@
       }
     },
     {
+      "handle": "Chris_Hawkner",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-02-25T13:53:48.032Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "EZ_Buddie",
       "seasons": {
         "Season 1": {
@@ -296,24 +320,6 @@
         "availableClasses": [
           "Cipher",
           "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "Chris_Hawkner",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-25T06:35:34.253Z",
+  "updatedAt": "2026-02-25T10:33:31.864Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -57,6 +57,30 @@
           "Cipher",
           "Scout",
           "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "EA_Failroader",
+      "seasons": {
+        "Season 1": {
+          "class": "Archivist",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 3,
+      "lastUpdate": "2026-02-24T17:39:46.577Z",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}
@@ -217,30 +241,6 @@
       },
       "totalPoints": 3,
       "lastUpdate": "2026-02-24T16:44:13.361Z",
-      "eligibility": {
-        "usedClasses": [
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "EA_Failroader",
-      "seasons": {
-        "Season 1": {
-          "class": "Archivist",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 1,
-      "lastUpdate": "2026-02-04T15:47:41.987Z",
       "eligibility": {
         "usedClasses": [
           "Archivist"

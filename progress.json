@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-26T12:35:37.891Z",
+  "updatedAt": "2026-02-26T18:35:38.006Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -320,6 +320,42 @@
         "availableClasses": [
           "Cipher",
           "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "ElhaSims",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "NoikaSims",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

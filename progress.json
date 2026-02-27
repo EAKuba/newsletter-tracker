@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-27T12:35:32.861Z",
+  "updatedAt": "2026-02-27T18:35:37.197Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -96,7 +96,7 @@
         }
       },
       "totalPoints": 3,
-      "lastUpdate": "2026-02-26T23:54:52.976Z",
+      "lastUpdate": "2026-02-27T12:59:58.177Z",
       "eligibility": {
         "usedClasses": [
           "Archivist"
@@ -327,6 +327,30 @@
       }
     },
     {
+      "handle": "NoikaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-02-27T17:37:25.877Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Overskillz25",
       "seasons": {
         "Season 1": {
@@ -344,24 +368,6 @@
         "availableClasses": [
           "Cipher",
           "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "NoikaSims",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

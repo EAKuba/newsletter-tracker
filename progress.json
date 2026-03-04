@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-04T06:35:50.227Z",
+  "updatedAt": "2026-03-04T08:59:03.261Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -303,6 +303,30 @@
       }
     },
     {
+      "handle": "m1k3ol",
+      "seasons": {
+        "Season 1": {
+          "class": "Cipher",
+          "points": 2,
+          "badges": []
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-03-04T08:16:57.237Z",
+      "eligibility": {
+        "usedClasses": [
+          "Cipher"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Chris_Hawkner",
       "seasons": {
         "Season 1": {
@@ -367,24 +391,6 @@
         ],
         "availableClasses": [
           "Cipher",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "M1k3ol",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Cipher"
-        ],
-        "availableClasses": [
-          "Sentinel",
           "Scout",
           "Archivist"
         ],

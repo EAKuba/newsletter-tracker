@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05T06:35:56.387Z",
+  "updatedAt": "2026-03-05T08:47:15.004Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -14,6 +14,30 @@
     "Season 4"
   ],
   "players": [
+    {
+      "handle": "rosemow",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-03-02T04:58:13.749Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
     {
       "handle": "m1k3ol",
       "seasons": {
@@ -31,30 +55,6 @@
         ],
         "availableClasses": [
           "Sentinel",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "rosemow",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 4,
-          "badges": []
-        }
-      },
-      "totalPoints": 4,
-      "lastUpdate": "2026-03-02T03:28:29.340Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
           "Scout",
           "Archivist"
         ],

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-05T08:47:15.004Z",
+  "updatedAt": "2026-03-05T08:49:15.552Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -39,6 +39,30 @@
       }
     },
     {
+      "handle": "SharpGoblin",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-03-05T05:16:17.495Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "m1k3ol",
       "seasons": {
         "Season 1": {
@@ -55,30 +79,6 @@
         ],
         "availableClasses": [
           "Sentinel",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "SharpGoblin",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 4,
-          "badges": []
-        }
-      },
-      "totalPoints": 4,
-      "lastUpdate": "2026-03-05T05:11:39.108Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
           "Scout",
           "Archivist"
         ],

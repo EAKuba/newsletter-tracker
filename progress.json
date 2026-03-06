@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-06T09:10:51.196Z",
+  "updatedAt": "2026-03-06T12:35:49.810Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -327,6 +327,30 @@
       }
     },
     {
+      "handle": "EZ_Buddie",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 2,
+          "badges": []
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-03-06T09:20:50.327Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Chris_Hawkner",
       "seasons": {
         "Season 1": {
@@ -351,30 +375,6 @@
       }
     },
     {
-      "handle": "EZ_Buddie",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 1,
-      "lastUpdate": "2026-02-05T13:09:06.730Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
       "handle": "Overskillz25",
       "seasons": {
         "Season 1": {
@@ -392,6 +392,24 @@
         "availableClasses": [
           "Cipher",
           "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "ORANGE-EXPRESS",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-11T06:35:37.674Z",
+  "updatedAt": "2026-03-11T10:47:44.780Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -32,6 +32,30 @@
         "availableClasses": [
           "Sentinel",
           "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "BAFANC",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-03-07T15:07:07.559Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
           "Archivist"
         ],
         "needsReregistration": false,
@@ -120,7 +144,7 @@
         }
       },
       "totalPoints": 6,
-      "lastUpdate": "2026-03-05T05:16:17.495Z",
+      "lastUpdate": "2026-03-08T08:49:47.099Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel"
@@ -151,30 +175,6 @@
         ],
         "availableClasses": [
           "Sentinel",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "BAFANC",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 4,
-          "badges": []
-        }
-      },
-      "totalPoints": 4,
-      "lastUpdate": "2026-03-07T15:07:07.559Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
           "Scout",
           "Archivist"
         ],

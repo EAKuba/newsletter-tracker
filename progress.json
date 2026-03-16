@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-16T06:35:40.150Z",
+  "updatedAt": "2026-03-16T10:54:57.769Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -104,6 +104,30 @@
         "availableClasses": [
           "Sentinel",
           "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "NewFoundRemedy",
+      "seasons": {
+        "Season 1": {
+          "class": "Cipher",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-03-16T07:34:10.810Z",
+      "eligibility": {
+        "usedClasses": [
+          "Cipher"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Scout",
           "Archivist"
         ],
         "needsReregistration": false,
@@ -241,30 +265,6 @@
       },
       "totalPoints": 3,
       "lastUpdate": "2026-02-24T16:38:00.717Z",
-      "eligibility": {
-        "usedClasses": [
-          "Cipher"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "NewFoundRemedy",
-      "seasons": {
-        "Season 1": {
-          "class": "Cipher",
-          "points": 3,
-          "badges": []
-        }
-      },
-      "totalPoints": 3,
-      "lastUpdate": "2026-02-09T09:45:36.128Z",
       "eligibility": {
         "usedClasses": [
           "Cipher"

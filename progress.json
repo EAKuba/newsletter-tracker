@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T06:35:33.650Z",
+  "updatedAt": "2026-03-18T10:20:33.982Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -81,6 +81,30 @@
           "Sentinel",
           "Cipher",
           "Scout"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "ElliotLH",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-03-17T15:13:01.676Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}
@@ -200,30 +224,6 @@
         "availableClasses": [
           "Sentinel",
           "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "ElliotLH",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 4,
-          "badges": []
-        }
-      },
-      "totalPoints": 4,
-      "lastUpdate": "2026-03-10T13:44:13.586Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

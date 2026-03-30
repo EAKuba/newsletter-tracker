@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-29T05:35:36.583Z",
+  "updatedAt": "2026-03-30T10:09:46.967Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -87,6 +87,30 @@
       }
     },
     {
+      "handle": "ElhaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Archivist",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-03-27T23:52:16.189Z",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "ElliotLH",
       "seasons": {
         "Season 1": {
@@ -159,6 +183,30 @@
       }
     },
     {
+      "handle": "NoikaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-03-27T21:09:11.642Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "rosemow",
       "seasons": {
         "Season 1": {
@@ -224,54 +272,6 @@
         "availableClasses": [
           "Sentinel",
           "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "ElhaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Archivist",
-          "points": 4,
-          "badges": []
-        }
-      },
-      "totalPoints": 4,
-      "lastUpdate": "2026-03-27T23:52:16.189Z",
-      "eligibility": {
-        "usedClasses": [
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "NoikaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 4,
-          "badges": []
-        }
-      },
-      "totalPoints": 4,
-      "lastUpdate": "2026-03-27T21:09:11.642Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

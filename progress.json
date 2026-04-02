@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T17:35:43.704Z",
+  "updatedAt": "2026-04-02T23:35:49.947Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -32,6 +32,30 @@
         "availableClasses": [
           "Sentinel",
           "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "rosemow",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 7,
+          "badges": []
+        }
+      },
+      "totalPoints": 7,
+      "lastUpdate": "2026-04-02T18:38:18.580Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
           "Archivist"
         ],
         "needsReregistration": false,
@@ -207,30 +231,6 @@
       }
     },
     {
-      "handle": "rosemow",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 6,
-          "badges": []
-        }
-      },
-      "totalPoints": 6,
-      "lastUpdate": "2026-03-02T04:58:13.749Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
       "handle": "SharpGoblin",
       "seasons": {
         "Season 1": {
@@ -393,6 +393,24 @@
           "Cipher",
           "Scout",
           "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Bluegayle",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

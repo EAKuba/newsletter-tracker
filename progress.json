@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-04T05:35:37.191Z",
+  "updatedAt": "2026-04-04T11:35:45.821Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -279,6 +279,30 @@
       }
     },
     {
+      "handle": "EZ_Buddie",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 3,
+      "lastUpdate": "2026-04-04T11:22:57.504Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Midnight9746",
       "seasons": {
         "Season 1": {
@@ -327,30 +351,6 @@
       }
     },
     {
-      "handle": "EZ_Buddie",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 2,
-          "badges": []
-        }
-      },
-      "totalPoints": 2,
-      "lastUpdate": "2026-03-06T09:20:50.327Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
       "handle": "Chris_Hawkner",
       "seasons": {
         "Season 1": {
@@ -361,6 +361,30 @@
       },
       "totalPoints": 1,
       "lastUpdate": "2026-02-25T13:53:48.032Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "ORANGE-EXPRESS",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-04-04T10:46:37.055Z",
       "eligibility": {
         "usedClasses": [
           "Scout"
@@ -411,24 +435,6 @@
           "Sentinel",
           "Cipher",
           "Scout"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "ORANGE-EXPRESS",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

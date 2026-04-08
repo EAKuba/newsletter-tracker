@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T09:43:06.320Z",
+  "updatedAt": "2026-04-08T09:45:59.735Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -351,16 +351,16 @@
       }
     },
     {
-      "handle": "Chris_Hawkner",
+      "handle": "ORANGE-EXPRESS",
       "seasons": {
         "Season 1": {
           "class": "Scout",
-          "points": 1,
+          "points": 2,
           "badges": []
         }
       },
-      "totalPoints": 1,
-      "lastUpdate": "2026-02-25T13:53:48.032Z",
+      "totalPoints": 2,
+      "lastUpdate": "2026-04-04T10:46:37.055Z",
       "eligibility": {
         "usedClasses": [
           "Scout"
@@ -375,7 +375,7 @@
       }
     },
     {
-      "handle": "ORANGE-EXPRESS",
+      "handle": "Chris_Hawkner",
       "seasons": {
         "Season 1": {
           "class": "Scout",
@@ -384,7 +384,7 @@
         }
       },
       "totalPoints": 1,
-      "lastUpdate": "2026-04-04T10:46:37.055Z",
+      "lastUpdate": "2026-02-25T13:53:48.032Z",
       "eligibility": {
         "usedClasses": [
           "Scout"

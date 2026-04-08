@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T05:35:47.907Z",
+  "updatedAt": "2026-04-08T09:43:06.320Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -43,11 +43,11 @@
       "seasons": {
         "Season 1": {
           "class": "Sentinel",
-          "points": 7,
+          "points": 9,
           "badges": []
         }
       },
-      "totalPoints": 7,
+      "totalPoints": 9,
       "lastUpdate": "2026-04-02T18:38:18.580Z",
       "eligibility": {
         "usedClasses": [

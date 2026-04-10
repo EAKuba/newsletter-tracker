@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-10T05:35:35.087Z",
+  "updatedAt": "2026-04-10T11:35:55.358Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -435,6 +435,24 @@
           "Sentinel",
           "Cipher",
           "Scout"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "masushowa",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

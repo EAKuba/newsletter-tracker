@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-27T17:35:43.494Z",
+  "updatedAt": "2026-04-27T23:35:39.472Z",
   "currentSeason": "Season 1",
   "classes": [
     "Sentinel",
@@ -135,6 +135,30 @@
       }
     },
     {
+      "handle": "NoikaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 7,
+          "badges": []
+        }
+      },
+      "totalPoints": 7,
+      "lastUpdate": "2026-04-27T17:40:27.767Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "BAFANC",
       "seasons": {
         "Season 1": {
@@ -224,30 +248,6 @@
         "availableClasses": [
           "Sentinel",
           "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "NoikaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 6,
-          "badges": []
-        }
-      },
-      "totalPoints": 6,
-      "lastUpdate": "2026-03-27T21:09:11.642Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
           "Archivist"
         ],
         "needsReregistration": false,

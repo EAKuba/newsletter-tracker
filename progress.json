@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-01T17:35:44.391Z",
+  "updatedAt": "2026-05-01T23:35:35.098Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -29,7 +29,7 @@
         }
       },
       "totalPoints": 10,
-      "lastUpdate": "2026-04-30T14:01:28.658Z",
+      "lastUpdate": "2026-05-01T21:27:12.794Z",
       "eligibility": {
         "usedClasses": [
           "Archivist",

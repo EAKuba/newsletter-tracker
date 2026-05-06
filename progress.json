@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-06T05:35:49.073Z",
+  "updatedAt": "2026-05-06T11:35:38.004Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -59,6 +59,35 @@
       },
       "totalPoints": 12,
       "lastUpdate": "2026-05-05T04:38:33.787Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel",
+          "Cipher"
+        ],
+        "availableClasses": [
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "rosemow",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 10,
+      "lastUpdate": "2026-05-06T09:34:23.361Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel",
@@ -198,30 +227,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "rosemow",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 9,
-          "badges": []
-        }
-      },
-      "totalPoints": 9,
-      "lastUpdate": "2026-04-02T18:38:18.580Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel",
-          "Cipher"
-        ],
-        "availableClasses": [
-          "Scout",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

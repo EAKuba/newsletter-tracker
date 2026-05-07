@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-07T11:35:42.523Z",
+  "updatedAt": "2026-05-07T16:29:07.855Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -467,23 +467,21 @@
       }
     },
     {
-      "handle": "bluegayle",
+      "handle": "Bluegayle",
       "seasons": {},
       "totalPoints": 0,
       "lastUpdate": "",
       "eligibility": {
         "usedClasses": [
-          "Archivist"
+          "Archivist",
+          "Sentinel"
         ],
         "availableClasses": [
-          "Sentinel",
           "Cipher",
           "Scout"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 2": "Not registered"
-        }
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

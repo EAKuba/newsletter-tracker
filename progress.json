@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-07T16:29:07.855Z",
+  "updatedAt": "2026-05-07T16:30:31.104Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -415,6 +415,30 @@
       }
     },
     {
+      "handle": "Bluegayle",
+      "seasons": {
+        "Season 1": {
+          "class": "Archivist",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-05-06T18:04:59.584Z",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist",
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Chris_Hawkner",
       "seasons": {
         "Season 1": {
@@ -464,24 +488,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "Bluegayle",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Archivist",
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Scout"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

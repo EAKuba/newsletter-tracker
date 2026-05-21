@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21T05:35:35.879Z",
+  "updatedAt": "2026-05-21T11:35:36.006Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -495,12 +495,12 @@
       "lastUpdate": "",
       "eligibility": {
         "usedClasses": [
-          "Archivist"
+          "Scout"
         ],
         "availableClasses": [
           "Sentinel",
           "Cipher",
-          "Scout"
+          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

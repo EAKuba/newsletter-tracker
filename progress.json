@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-20T23:35:44.516Z",
+  "updatedAt": "2026-05-21T05:35:35.879Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -216,17 +216,15 @@
       "lastUpdate": "2026-04-27T17:40:27.767Z",
       "eligibility": {
         "usedClasses": [
-          "Scout"
+          "Scout",
+          "Archivist"
         ],
         "availableClasses": [
           "Sentinel",
-          "Cipher",
-          "Archivist"
+          "Cipher"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 2": "Not registered"
-        }
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {
@@ -488,6 +486,24 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
+      }
+    },
+    {
+      "handle": "Cbarber89",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-26T11:35:46.261Z",
+  "updatedAt": "2026-05-26T14:53:51.498Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -38,6 +38,35 @@
         "availableClasses": [
           "Sentinel",
           "Cipher"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Ellupelluellu",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Sentinel",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 12,
+      "lastUpdate": "2026-05-26T14:13:13.578Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}
@@ -177,30 +206,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "Ellupelluellu",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        }
-      },
-      "totalPoints": 9,
-      "lastUpdate": "2026-05-01T13:27:19.966Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

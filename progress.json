@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T05:35:58.409Z",
+  "updatedAt": "2026-05-27T08:25:09.483Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -73,6 +73,35 @@
       }
     },
     {
+      "handle": "NoikaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Archivist",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 12,
+      "lastUpdate": "2026-05-26T18:33:40.742Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "rosemow",
       "seasons": {
         "Season 1": {
@@ -125,35 +154,6 @@
         "availableClasses": [
           "Scout",
           "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "NoikaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Archivist",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 10,
-      "lastUpdate": "2026-05-26T18:33:40.742Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}
@@ -423,6 +423,30 @@
       }
     },
     {
+      "handle": "Cbarber89",
+      "seasons": {
+        "Season 2": {
+          "class": "Scout",
+          "points": 2,
+          "badges": []
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-05-26T15:32:04.536Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Bluegayle",
       "seasons": {
         "Season 1": {
@@ -496,24 +520,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "Cbarber89",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-29T05:35:51.419Z",
+  "updatedAt": "2026-05-29T11:35:58.137Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -432,7 +432,7 @@
         }
       },
       "totalPoints": 2,
-      "lastUpdate": "2026-05-26T15:32:04.536Z",
+      "lastUpdate": "2026-05-29T11:31:13.030Z",
       "eligibility": {
         "usedClasses": [
           "Scout"

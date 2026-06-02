@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T05:35:37.890Z",
+  "updatedAt": "2026-06-02T11:35:36.174Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -290,6 +290,35 @@
       }
     },
     {
+      "handle": "ORANGE-EXPRESS",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 2,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Archivist",
+          "points": 4,
+          "badges": []
+        }
+      },
+      "totalPoints": 6,
+      "lastUpdate": "2026-06-02T10:21:46.158Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "m1k3ol",
       "seasons": {
         "Season 1": {
@@ -313,35 +342,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "ORANGE-EXPRESS",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 2,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Archivist",
-          "points": 3,
-          "badges": []
-        }
-      },
-      "totalPoints": 5,
-      "lastUpdate": "2026-05-01T10:33:09.506Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

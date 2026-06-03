@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-03T05:35:45.550Z",
+  "updatedAt": "2026-06-03T11:35:36.245Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -24,11 +24,11 @@
         },
         "Season 2": {
           "class": "Cipher",
-          "points": 4,
+          "points": 6,
           "badges": []
         }
       },
-      "totalPoints": 13,
+      "totalPoints": 15,
       "lastUpdate": "2026-06-01T10:51:58.244Z",
       "eligibility": {
         "usedClasses": [
@@ -238,6 +238,35 @@
       }
     },
     {
+      "handle": "ORANGE-EXPRESS",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 2,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Archivist",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 8,
+      "lastUpdate": "2026-06-02T10:21:46.158Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "BAFANC",
       "seasons": {
         "Season 1": {
@@ -287,35 +316,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "ORANGE-EXPRESS",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 2,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Archivist",
-          "points": 4,
-          "badges": []
-        }
-      },
-      "totalPoints": 6,
-      "lastUpdate": "2026-06-02T10:21:46.158Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

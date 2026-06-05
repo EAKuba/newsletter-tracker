@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T05:35:59.389Z",
+  "updatedAt": "2026-06-05T11:35:40.236Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -540,6 +540,24 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
+      }
+    },
+    {
+      "handle": "right_cat45",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     }
   ]

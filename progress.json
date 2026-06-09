@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T05:35:38.011Z",
+  "updatedAt": "2026-06-09T11:35:55.879Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -523,6 +523,30 @@
       }
     },
     {
+      "handle": "right_cat45",
+      "seasons": {
+        "Season 2": {
+          "class": "Scout",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 1,
+      "lastUpdate": "2026-06-09T06:18:21.892Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "masushowa",
       "seasons": {},
       "totalPoints": 0,
@@ -540,24 +564,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "right_cat45",
-      "seasons": {},
-      "totalPoints": 0,
-      "lastUpdate": "",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     }
   ]

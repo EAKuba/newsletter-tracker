@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T17:35:35.438Z",
+  "updatedAt": "2026-06-30T23:35:34.346Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -447,6 +447,30 @@
       }
     },
     {
+      "handle": "right_cat45",
+      "seasons": {
+        "Season 2": {
+          "class": "Scout",
+          "points": 2,
+          "badges": []
+        }
+      },
+      "totalPoints": 2,
+      "lastUpdate": "2026-06-30T21:33:22.746Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel",
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "Bluegayle",
       "seasons": {
         "Season 1": {
@@ -520,30 +544,6 @@
         "invalidRegistrations": {
           "Season 2": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "right_cat45",
-      "seasons": {
-        "Season 2": {
-          "class": "Scout",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 1,
-      "lastUpdate": "2026-06-09T06:18:21.892Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

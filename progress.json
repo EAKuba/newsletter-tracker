@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T11:35:35.133Z",
+  "updatedAt": "2026-07-14T17:35:43.325Z",
   "currentSeason": "Season 2",
   "classes": [
     "Sentinel",
@@ -53,11 +53,11 @@
         },
         "Season 2": {
           "class": "Cipher",
-          "points": 7,
+          "points": 9,
           "badges": []
         }
       },
-      "totalPoints": 16,
+      "totalPoints": 18,
       "lastUpdate": "2026-07-13T08:31:10.067Z",
       "eligibility": {
         "usedClasses": [

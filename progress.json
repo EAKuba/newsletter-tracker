@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T11:35:37.750Z",
+  "updatedAt": "2026-07-31T17:35:50.844Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -33,16 +33,14 @@
       "eligibility": {
         "usedClasses": [
           "Scout",
-          "Cipher"
-        ],
-        "availableClasses": [
-          "Sentinel",
+          "Cipher",
           "Archivist"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 3": "Not registered"
-        }
+        "availableClasses": [
+          "Sentinel"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

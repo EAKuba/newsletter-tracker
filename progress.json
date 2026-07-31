@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T05:35:36.247Z",
+  "updatedAt": "2026-07-31T11:35:37.750Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -95,16 +95,14 @@
       "eligibility": {
         "usedClasses": [
           "Sentinel",
-          "Cipher"
+          "Cipher",
+          "Scout"
         ],
         "availableClasses": [
-          "Scout",
           "Archivist"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 3": "Not registered"
-        }
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {
@@ -188,16 +186,14 @@
       "eligibility": {
         "usedClasses": [
           "Scout",
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel",
+          "Archivist",
           "Cipher"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 3": "Not registered"
-        }
+        "availableClasses": [
+          "Sentinel"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

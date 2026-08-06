@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-06T05:36:06.905Z",
+  "updatedAt": "2026-08-06T11:35:37.830Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -14,6 +14,40 @@
     "Season 4"
   ],
   "players": [
+    {
+      "handle": "rosemow",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Scout",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 19,
+      "lastUpdate": "2026-08-06T11:23:42.162Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "availableClasses": [
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
     {
       "handle": "Ellupelluellu",
       "seasons": {
@@ -72,35 +106,6 @@
         "invalidRegistrations": {
           "Season 3": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "rosemow",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        }
-      },
-      "totalPoints": 18,
-      "lastUpdate": "2026-07-07T18:50:50.260Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout"
-        ],
-        "availableClasses": [
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

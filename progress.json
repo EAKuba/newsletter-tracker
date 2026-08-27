@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T05:35:50.572Z",
+  "updatedAt": "2026-08-27T11:36:01.382Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -248,17 +248,15 @@
       "lastUpdate": "2026-04-28T18:16:34.218Z",
       "eligibility": {
         "usedClasses": [
-          "Archivist"
+          "Archivist",
+          "Scout"
         ],
         "availableClasses": [
           "Sentinel",
-          "Cipher",
-          "Scout"
+          "Cipher"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 3": "Not registered"
-        }
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {
@@ -569,6 +567,24 @@
         "invalidRegistrations": {
           "Season 3": "Not registered"
         }
+      }
+    },
+    {
+      "handle": "EA_Kuba",
+      "seasons": {},
+      "totalPoints": 0,
+      "lastUpdate": "",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

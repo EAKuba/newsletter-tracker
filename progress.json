@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T11:36:01.382Z",
+  "updatedAt": "2026-08-27T11:42:56.751Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -145,6 +145,35 @@
       }
     },
     {
+      "handle": "ElhaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Archivist",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Scout",
+          "points": 5,
+          "badges": []
+        }
+      },
+      "totalPoints": 14,
+      "lastUpdate": "2026-06-29T20:52:52.649Z",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist",
+          "Cipher",
+          "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "ORANGE-EXPRESS",
       "seasons": {
         "Season 1": {
@@ -233,30 +262,6 @@
         "invalidRegistrations": {
           "Season 3": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "ElhaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Archivist",
-          "points": 9,
-          "badges": []
-        }
-      },
-      "totalPoints": 9,
-      "lastUpdate": "2026-04-28T18:16:34.218Z",
-      "eligibility": {
-        "usedClasses": [
-          "Archivist",
-          "Scout"
-        ],
-        "availableClasses": [
-          "Sentinel",
-          "Cipher"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

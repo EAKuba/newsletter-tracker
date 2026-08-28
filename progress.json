@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T08:46:01.835Z",
+  "updatedAt": "2026-08-28T08:47:35.289Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -102,7 +102,7 @@
         }
       },
       "totalPoints": 19,
-      "lastUpdate": "2026-08-27T19:39:20.353Z",
+      "lastUpdate": "2026-08-27T19:50:45.948Z",
       "eligibility": {
         "usedClasses": [
           "Archivist",

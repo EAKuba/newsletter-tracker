@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T23:35:43.061Z",
+  "updatedAt": "2026-08-29T05:35:38.291Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -128,23 +128,26 @@
           "class": "Archivist",
           "points": 9,
           "badges": []
+        },
+        "Season 3": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": []
         }
       },
-      "totalPoints": 18,
-      "lastUpdate": "2026-07-30T02:22:06.862Z",
+      "totalPoints": 19,
+      "lastUpdate": "2026-08-29T00:58:14.933Z",
       "eligibility": {
         "usedClasses": [
           "Scout",
-          "Archivist"
+          "Archivist",
+          "Sentinel"
         ],
         "availableClasses": [
-          "Sentinel",
           "Cipher"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 3": "Not registered"
-        }
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {
@@ -166,16 +169,14 @@
       "eligibility": {
         "usedClasses": [
           "Sentinel",
-          "Cipher"
+          "Cipher",
+          "Scout"
         ],
         "availableClasses": [
-          "Scout",
           "Archivist"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 3": "Not registered"
-        }
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

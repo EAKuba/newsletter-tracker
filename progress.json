@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T11:35:42.541Z",
+  "updatedAt": "2026-09-01T17:36:02.906Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -83,6 +83,40 @@
       }
     },
     {
+      "handle": "NoikaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Archivist",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Sentinel",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 21,
+      "lastUpdate": "2026-08-29T00:58:14.933Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Archivist",
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "rosemow",
       "seasons": {
         "Season 1": {
@@ -117,40 +151,6 @@
       }
     },
     {
-      "handle": "NoikaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Archivist",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Sentinel",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 19,
-      "lastUpdate": "2026-08-29T00:58:14.933Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Archivist",
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
       "handle": "SharpGoblin",
       "seasons": {
         "Season 1": {
@@ -165,11 +165,11 @@
         },
         "Season 3": {
           "class": "Scout",
-          "points": 1,
+          "points": 3,
           "badges": []
         }
       },
-      "totalPoints": 19,
+      "totalPoints": 21,
       "lastUpdate": "2026-08-29T05:49:27.943Z",
       "eligibility": {
         "usedClasses": [

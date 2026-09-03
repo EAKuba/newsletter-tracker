@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T11:35:42.861Z",
+  "updatedAt": "2026-09-03T17:36:05.795Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -29,11 +29,11 @@
         },
         "Season 3": {
           "class": "Scout",
-          "points": 4,
+          "points": 6,
           "badges": []
         }
       },
-      "totalPoints": 22,
+      "totalPoints": 24,
       "lastUpdate": "2026-09-03T03:10:06.607Z",
       "eligibility": {
         "usedClasses": [
@@ -199,11 +199,11 @@
         },
         "Season 3": {
           "class": "Cipher",
-          "points": 4,
+          "points": 6,
           "badges": []
         }
       },
-      "totalPoints": 14,
+      "totalPoints": 16,
       "lastUpdate": "2026-09-02T10:31:20.756Z",
       "eligibility": {
         "usedClasses": [

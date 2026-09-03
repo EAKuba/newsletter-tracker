@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T23:35:36.759Z",
+  "updatedAt": "2026-09-03T05:35:42.270Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -14,6 +14,40 @@
     "Season 4"
   ],
   "players": [
+    {
+      "handle": "rosemow",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Scout",
+          "points": 4,
+          "badges": []
+        }
+      },
+      "totalPoints": 22,
+      "lastUpdate": "2026-09-03T03:10:06.607Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "availableClasses": [
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
     {
       "handle": "ElhaSims",
       "seasons": {
@@ -111,40 +145,6 @@
         ],
         "availableClasses": [
           "Cipher"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "rosemow",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Scout",
-          "points": 3,
-          "badges": []
-        }
-      },
-      "totalPoints": 21,
-      "lastUpdate": "2026-08-06T11:23:42.162Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout"
-        ],
-        "availableClasses": [
-          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

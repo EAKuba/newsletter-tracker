@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T17:35:37.846Z",
+  "updatedAt": "2026-09-16T23:35:37.591Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -35,6 +35,40 @@
       },
       "totalPoints": 24,
       "lastUpdate": "2026-09-03T03:10:06.607Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "availableClasses": [
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "SharpGoblin",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Scout",
+          "points": 4,
+          "badges": []
+        }
+      },
+      "totalPoints": 22,
+      "lastUpdate": "2026-09-16T20:26:42.995Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel",
@@ -145,40 +179,6 @@
         ],
         "availableClasses": [
           "Cipher"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "SharpGoblin",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Scout",
-          "points": 3,
-          "badges": []
-        }
-      },
-      "totalPoints": 21,
-      "lastUpdate": "2026-08-29T05:49:27.943Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout"
-        ],
-        "availableClasses": [
-          "Archivist"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

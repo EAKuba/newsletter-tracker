@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T23:35:37.147Z",
+  "updatedAt": "2026-09-27T05:35:37.859Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -380,6 +380,35 @@
       }
     },
     {
+      "handle": "right_cat45",
+      "seasons": {
+        "Season 2": {
+          "class": "Scout",
+          "points": 3,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 4,
+      "lastUpdate": "2026-09-27T03:31:15.315Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher",
+          "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "EZ_Buddie",
       "seasons": {
         "Season 1": {
@@ -429,30 +458,6 @@
         "invalidRegistrations": {
           "Season 3": "Not registered"
         }
-      }
-    },
-    {
-      "handle": "right_cat45",
-      "seasons": {
-        "Season 2": {
-          "class": "Scout",
-          "points": 3,
-          "badges": []
-        }
-      },
-      "totalPoints": 3,
-      "lastUpdate": "2026-06-30T21:33:22.746Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
-          "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
       }
     },
     {

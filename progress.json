@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T05:35:38.620Z",
+  "updatedAt": "2026-10-11T11:35:44.378Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -29,11 +29,11 @@
         },
         "Season 3": {
           "class": "Scout",
-          "points": 7,
+          "points": 8,
           "badges": []
         }
       },
-      "totalPoints": 25,
+      "totalPoints": 26,
       "lastUpdate": "2026-10-09T17:02:06.478Z",
       "eligibility": {
         "usedClasses": [
@@ -74,6 +74,40 @@
           "Archivist",
           "Cipher",
           "Scout"
+        ],
+        "availableClasses": [
+          "Sentinel"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "Ellupelluellu",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Archivist",
+          "points": 6,
+          "badges": []
+        }
+      },
+      "totalPoints": 24,
+      "lastUpdate": "2026-10-04T16:27:22.406Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Cipher",
+          "Archivist"
         ],
         "availableClasses": [
           "Sentinel"
@@ -145,40 +179,6 @@
         ],
         "availableClasses": [
           "Archivist"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "Ellupelluellu",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Archivist",
-          "points": 3,
-          "badges": []
-        }
-      },
-      "totalPoints": 21,
-      "lastUpdate": "2026-08-23T15:34:05.820Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Cipher",
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

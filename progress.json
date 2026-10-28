@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T12:36:00.367Z",
+  "updatedAt": "2026-10-28T18:35:38.279Z",
   "currentSeason": "Season 3",
   "classes": [
     "Sentinel",
@@ -43,6 +43,40 @@
         ],
         "availableClasses": [
           "Archivist"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "NoikaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Archivist",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Sentinel",
+          "points": 7,
+          "badges": []
+        }
+      },
+      "totalPoints": 25,
+      "lastUpdate": "2026-10-28T17:03:21.654Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Archivist",
+          "Sentinel"
+        ],
+        "availableClasses": [
+          "Cipher"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}
@@ -111,40 +145,6 @@
         ],
         "availableClasses": [
           "Sentinel"
-        ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "NoikaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Archivist",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Sentinel",
-          "points": 6,
-          "badges": []
-        }
-      },
-      "totalPoints": 24,
-      "lastUpdate": "2026-09-29T01:31:58.529Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Archivist",
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher"
         ],
         "needsReregistration": false,
         "invalidRegistrations": {}

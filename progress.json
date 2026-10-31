@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-30T18:35:45.674Z",
-  "currentSeason": "Season 3",
+  "updatedAt": "2026-10-31T00:36:09.597Z",
+  "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
     "Cipher",
@@ -44,8 +44,10 @@
         "availableClasses": [
           "Sentinel"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -78,8 +80,10 @@
         "availableClasses": [
           "Cipher"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -112,8 +116,10 @@
         "availableClasses": [
           "Archivist"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -146,8 +152,10 @@
         "availableClasses": [
           "Sentinel"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -180,8 +188,10 @@
         "availableClasses": [
           "Archivist"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -214,8 +224,10 @@
         "availableClasses": [
           "Sentinel"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -245,7 +257,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -271,7 +283,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -297,7 +309,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -323,7 +335,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -349,7 +361,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -375,7 +387,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -404,8 +416,10 @@
           "Cipher",
           "Archivist"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -430,7 +444,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -456,7 +470,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -482,7 +496,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -508,7 +522,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -534,7 +548,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -560,7 +574,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
@@ -586,12 +600,12 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     },
     {
-      "handle": "EA_Kuba",
+      "handle": "ea_kuba",
       "seasons": {},
       "totalPoints": 0,
       "lastUpdate": "",
@@ -604,8 +618,10 @@
           "Scout",
           "Archivist"
         ],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
       }
     },
     {
@@ -624,7 +640,7 @@
         ],
         "needsReregistration": true,
         "invalidRegistrations": {
-          "Season 3": "Not registered"
+          "Season 4": "Not registered"
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T06:35:44.424Z",
+  "updatedAt": "2026-11-02T12:35:49.046Z",
   "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
@@ -123,6 +123,42 @@
       }
     },
     {
+      "handle": "SharpGoblin",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Scout",
+          "points": 8,
+          "badges": []
+        }
+      },
+      "totalPoints": 26,
+      "lastUpdate": "2026-10-31T08:31:09.834Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout"
+        ],
+        "availableClasses": [
+          "Archivist"
+        ],
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
+      }
+    },
+    {
       "handle": "Ellupelluellu",
       "seasons": {
         "Season 1": {
@@ -151,42 +187,6 @@
         ],
         "availableClasses": [
           "Sentinel"
-        ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 4": "Not registered"
-        }
-      }
-    },
-    {
-      "handle": "SharpGoblin",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Scout",
-          "points": 6,
-          "badges": []
-        }
-      },
-      "totalPoints": 24,
-      "lastUpdate": "2026-09-16T20:26:42.995Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout"
-        ],
-        "availableClasses": [
-          "Archivist"
         ],
         "needsReregistration": true,
         "invalidRegistrations": {

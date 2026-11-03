@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T12:35:37.501Z",
+  "updatedAt": "2026-11-03T18:35:39.959Z",
   "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
@@ -167,12 +167,12 @@
         },
         "Season 3": {
           "class": "Archivist",
-          "points": 6,
+          "points": 7,
           "badges": []
         }
       },
-      "totalPoints": 24,
-      "lastUpdate": "2026-10-04T16:27:22.406Z",
+      "totalPoints": 25,
+      "lastUpdate": "2026-11-03T15:03:11.203Z",
       "eligibility": {
         "usedClasses": [
           "Scout",

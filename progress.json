@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T06:35:41.964Z",
+  "updatedAt": "2026-11-04T12:35:38.600Z",
   "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
@@ -34,12 +34,50 @@
         },
         "Season 4": {
           "class": "Archivist",
-          "points": 1,
+          "points": 3,
           "badges": []
         }
       },
-      "totalPoints": 28,
+      "totalPoints": 30,
       "lastUpdate": "2026-11-04T04:45:15.643Z",
+      "eligibility": {
+        "usedClasses": [
+          "Sentinel",
+          "Cipher",
+          "Scout",
+          "Archivist"
+        ],
+        "availableClasses": [],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
+      "handle": "SharpGoblin",
+      "seasons": {
+        "Season 1": {
+          "class": "Sentinel",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Scout",
+          "points": 8,
+          "badges": []
+        },
+        "Season 4": {
+          "class": "Archivist",
+          "points": 3,
+          "badges": []
+        }
+      },
+      "totalPoints": 29,
+      "lastUpdate": "2026-11-04T04:54:15.220Z",
       "eligibility": {
         "usedClasses": [
           "Sentinel",
@@ -89,6 +127,42 @@
       }
     },
     {
+      "handle": "Ellupelluellu",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Archivist",
+          "points": 9,
+          "badges": []
+        }
+      },
+      "totalPoints": 27,
+      "lastUpdate": "2026-11-03T15:03:11.203Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Cipher",
+          "Archivist"
+        ],
+        "availableClasses": [
+          "Sentinel"
+        ],
+        "needsReregistration": true,
+        "invalidRegistrations": {
+          "Season 4": "Not registered"
+        }
+      }
+    },
+    {
       "handle": "NoikaSims",
       "seasons": {
         "Season 1": {
@@ -125,80 +199,6 @@
       }
     },
     {
-      "handle": "SharpGoblin",
-      "seasons": {
-        "Season 1": {
-          "class": "Sentinel",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Scout",
-          "points": 8,
-          "badges": []
-        },
-        "Season 4": {
-          "class": "Archivist",
-          "points": 1,
-          "badges": []
-        }
-      },
-      "totalPoints": 27,
-      "lastUpdate": "2026-11-04T04:45:28.710Z",
-      "eligibility": {
-        "usedClasses": [
-          "Sentinel",
-          "Cipher",
-          "Scout",
-          "Archivist"
-        ],
-        "availableClasses": [],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "Ellupelluellu",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Archivist",
-          "points": 7,
-          "badges": []
-        }
-      },
-      "totalPoints": 25,
-      "lastUpdate": "2026-11-03T15:03:11.203Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Cipher",
-          "Archivist"
-        ],
-        "availableClasses": [
-          "Sentinel"
-        ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 4": "Not registered"
-        }
-      }
-    },
-    {
       "handle": "ORANGE-EXPRESS",
       "seasons": {
         "Season 1": {
@@ -218,11 +218,11 @@
         },
         "Season 4": {
           "class": "Sentinel",
-          "points": 1,
+          "points": 2,
           "badges": []
         }
       },
-      "totalPoints": 20,
+      "totalPoints": 21,
       "lastUpdate": "2026-11-02T21:57:40.354Z",
       "eligibility": {
         "usedClasses": [

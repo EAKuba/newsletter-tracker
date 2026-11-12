@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T18:35:40.646Z",
+  "updatedAt": "2026-11-12T00:35:37.678Z",
   "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
@@ -409,23 +409,26 @@
           "class": "Sentinel",
           "points": 1,
           "badges": []
+        },
+        "Season 4": {
+          "class": "Archivist",
+          "points": 1,
+          "badges": []
         }
       },
-      "totalPoints": 4,
-      "lastUpdate": "2026-09-27T03:31:15.315Z",
+      "totalPoints": 5,
+      "lastUpdate": "2026-11-11T23:17:37.974Z",
       "eligibility": {
         "usedClasses": [
           "Scout",
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher",
+          "Sentinel",
           "Archivist"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 4": "Not registered"
-        }
+        "availableClasses": [
+          "Cipher"
+        ],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

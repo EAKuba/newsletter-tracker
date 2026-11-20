@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T12:35:45.713Z",
+  "updatedAt": "2026-11-20T18:35:50.711Z",
   "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
@@ -151,15 +151,12 @@
         "usedClasses": [
           "Scout",
           "Cipher",
-          "Archivist"
-        ],
-        "availableClasses": [
+          "Archivist",
           "Sentinel"
         ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 4": "Not registered"
-        }
+        "availableClasses": [],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
       }
     },
     {

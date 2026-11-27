@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T00:35:40.155Z",
+  "updatedAt": "2026-11-27T06:35:35.970Z",
   "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
@@ -91,6 +91,44 @@
       }
     },
     {
+      "handle": "NoikaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Archivist",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Sentinel",
+          "points": 9,
+          "badges": []
+        },
+        "Season 4": {
+          "class": "Cipher",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 28,
+      "lastUpdate": "2026-11-27T06:08:09.784Z",
+      "eligibility": {
+        "usedClasses": [
+          "Scout",
+          "Archivist",
+          "Sentinel",
+          "Cipher"
+        ],
+        "availableClasses": [],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "ElhaSims",
       "seasons": {
         "Season 1": {
@@ -157,42 +195,6 @@
         "availableClasses": [],
         "needsReregistration": false,
         "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "NoikaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Archivist",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Sentinel",
-          "points": 9,
-          "badges": []
-        }
-      },
-      "totalPoints": 27,
-      "lastUpdate": "2026-10-28T17:03:21.654Z",
-      "eligibility": {
-        "usedClasses": [
-          "Scout",
-          "Archivist",
-          "Sentinel"
-        ],
-        "availableClasses": [
-          "Cipher"
-        ],
-        "needsReregistration": true,
-        "invalidRegistrations": {
-          "Season 4": "Not registered"
-        }
       }
     },
     {

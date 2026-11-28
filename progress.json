@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T12:35:47.865Z",
+  "updatedAt": "2026-11-28T18:35:39.173Z",
   "currentSeason": "Season 4",
   "classes": [
     "Sentinel",
@@ -91,6 +91,44 @@
       }
     },
     {
+      "handle": "ElhaSims",
+      "seasons": {
+        "Season 1": {
+          "class": "Archivist",
+          "points": 9,
+          "badges": []
+        },
+        "Season 2": {
+          "class": "Scout",
+          "points": 9,
+          "badges": []
+        },
+        "Season 3": {
+          "class": "Cipher",
+          "points": 9,
+          "badges": []
+        },
+        "Season 4": {
+          "class": "Sentinel",
+          "points": 1,
+          "badges": []
+        }
+      },
+      "totalPoints": 28,
+      "lastUpdate": "2026-11-28T18:05:09.549Z",
+      "eligibility": {
+        "usedClasses": [
+          "Archivist",
+          "Cipher",
+          "Scout",
+          "Sentinel"
+        ],
+        "availableClasses": [],
+        "needsReregistration": false,
+        "invalidRegistrations": {}
+      }
+    },
+    {
       "handle": "NoikaSims",
       "seasons": {
         "Season 1": {
@@ -122,39 +160,6 @@
           "Archivist",
           "Sentinel",
           "Cipher"
-        ],
-        "availableClasses": [],
-        "needsReregistration": false,
-        "invalidRegistrations": {}
-      }
-    },
-    {
-      "handle": "ElhaSims",
-      "seasons": {
-        "Season 1": {
-          "class": "Archivist",
-          "points": 9,
-          "badges": []
-        },
-        "Season 2": {
-          "class": "Scout",
-          "points": 9,
-          "badges": []
-        },
-        "Season 3": {
-          "class": "Cipher",
-          "points": 9,
-          "badges": []
-        }
-      },
-      "totalPoints": 27,
-      "lastUpdate": "2026-10-28T23:47:11.119Z",
-      "eligibility": {
-        "usedClasses": [
-          "Archivist",
-          "Cipher",
-          "Scout",
-          "Sentinel"
         ],
         "availableClasses": [],
         "needsReregistration": false,
